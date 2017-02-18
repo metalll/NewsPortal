@@ -54,9 +54,7 @@ button{
     margin-left: 10px;
     color: #ecf0f1;
 }
-.slider img{
-    width: 100%;
-}
+
 
 .header-bottom-info{
     display: inline-block;
@@ -129,6 +127,10 @@ button{
 .center-info .center-info-content h3 {
     color: #354a6b;
 }
+.center-info .center-info-backg {
+    background-color: #f4f4f4;
+    width: 100;
+}
 
 .client-content {
 
@@ -142,6 +144,7 @@ button{
 }
 
 .client-banner-content .banner-slider{
+
     margin: 20px 0 50px 0;
     display: flex;
     flex-wrap: wrap;
@@ -153,7 +156,13 @@ button{
 .banner-slider span {
     margin-top: 20px;
 }
-
+#navbtns-banner {
+    margin: 30px 10px 20px 0;
+    float: right;
+}
+#navbtns-banner img {
+    margin: 0 40px 0 10px;
+}
 .center-bottom-content {
     background-color: #f4f4f4;
     padding-top: 20px;
