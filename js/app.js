@@ -47,7 +47,7 @@ $(document).ready(function () {
     // </li>
     if ($("div").is(".news-block")) {
         $.ajax({
-            url: "/API/New",
+            url: "/API/News",
             type: "GET",
 
             success: function (data) {
