@@ -1,4 +1,4 @@
-function init() {
+$(document).ready(function () {
 
 
 
@@ -47,7 +47,7 @@ function init() {
     // </li>
     if ($("div").is(".news-block")) {
         $.ajax({
-            url: "/API/News",
+            url: "/API/New",
             type: "GET",
 
             success: function (data) {
@@ -104,15 +104,11 @@ function init() {
     $('.bxslider').bxSlider({
         auto: true
     });
-}
-
+});
 $(document).ready(function () {
     $('.bxslider1').bxSlider({
         auto: true
     });
-
-    document.addEventListener("DOMContentLoaded", init);
-
 });
 
 
