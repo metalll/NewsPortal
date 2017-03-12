@@ -1,8 +1,27 @@
+
+/* только для Internet Explorer */
+@font-face {
+    font-family: Scriptorama;
+    src: local("Scriptorama"),
+    url(../fonts/Panton/PantonLight.otf);
+}
+@font-face {
+
+    font-family: Scriptorama;
+
+    src: local("Scriptorama"),
+
+    url(../fonts/Panton/PantonLight.otf);
+
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: "Arial";
+    font-family: "Scriptorama";
 }
+
+
 
 header {
     margin-top: 30px;
