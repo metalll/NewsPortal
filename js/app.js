@@ -23,7 +23,9 @@ $(document).ready(function () {
                 var jsonEx = JSON.parse(data);
                 console.log("Industry JSON :" + jsonEx);
                 console.log(jsonEx);
-                for (var i = 0; i < 3; i++) {
+
+                for (var i = 0; i < jsonEx.values.elementsCount; i++) {
+
                     $(".center-block-info .row").append("<div class=\"col-md-4 text-center\">" +
                         "<img src=\"img/1.jpg\" alt=\"1\"> " +
                         "<h3>" + jsonEx.values[i].headerText + "</h3>" +
@@ -47,7 +49,9 @@ $(document).ready(function () {
     // </li>
     if ($("div").is(".news-block")) {
         $.ajax({
-            url: "/API/New",
+
+            url: "/API/News",
+
             type: "GET",
 
             success: function (data) {
@@ -91,12 +95,15 @@ $(document).ready(function () {
                     + "</div>"
                 );
                 $(".crsl-wrap .banner-slider").empty();
+
                 for (var banner in jsonEx.values) {
                     console.log("banner in loop" + banner);
+
                         $(".crsl-wrap .banner-slider").append("<div class=\"crsl-item\">" +
                             "<a href=\"#\"\"><img src=\"img/client-banner.jpg\" alt=\"client-banner\"></a>"
                             + "</div>")
                     }
+
                 $(function () {
                     $('.crsl-items-banner').carousel({
                         visible: 7,
@@ -136,7 +143,6 @@ $(document).ready(function () {
       }
 
 
-
     $('.bxslider').bxSlider({
         auto: true
     });
@@ -160,3 +166,4 @@ $(function () {
         e.preventDefault();
     });
 });
+
