@@ -8,6 +8,44 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
     <title>НИУККЦПБ</title>
+
+    <style>
+
+        /* label focus color */
+        .input-field input:focus + label {
+            color: white !important;
+        }
+        /* label underline focus color */
+
+        .input-field input[type=text]:focus + label {
+            color: #fff;
+        }
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #fff;
+            box-shadow: 0 1px 0 0 #fff;
+        }
+        /* valid color */
+        .input-field input[type=text].valid {
+            border-bottom: 1px solid #fff;
+            box-shadow: 0 1px 0 0 #fff;
+        }
+        /* invalid color */
+        .input-field input[type=text].invalid {
+            border-bottom: 1px solid #fff;
+            box-shadow: 0 1px 0 0 #fff;
+        }
+        /* icon prefix focus color */
+        .input-field .prefix.active {
+            color: #fff;
+        }
+
+        .dropdown-content li > a, .dropdown-content li > span {
+            color: #1a237e !important;
+        }
+
+    </style>
+
 </head>
 <body>
 <nav>
@@ -60,65 +98,50 @@
 
 <footer class="page-footer grey darken-3">
 
-    <div class="col s12">
-        <div class="container">
-            <div class="row">
-                <div class="col s3 text-center">
-                    <img src="../img/footer-logo.png" alt="footer-logo">
-                    <p>Научно-исследовательский учебно-консультационный центр промышленной безопасности.
-                    </p>
-                    <b>Промышленная безопасность в Украине</b>
-                </div>
-                <div class="col s3">
-                    <h3>Полезные ссылки</h3>
-                    <p>Быстря навигация по сайту</p>
-                    <ul>
-                        <li class="col s6"><a href="#">-Test</a></li>
-                        <li class="col s6"><a href="#">-Test</a></li>
-                        <li class="col s6"><a href="#">-Test</a></li>
-                        <li class="col s6"><a href="#">-Test</a></li>
-                        <li class="col s6"><a href="#">-Test</a></li>
-                        <li class="col s6"><a href="#">-Test</a></li>
-                        <li class="col s6"><a href="#">-Test</a></li>
-                    </ul>
-                </div>
-                <div class="col s3">
-                    <h3>Новостная подписка</h3>
-                    <p>Подписка на последние новости из мира промышленной безопасности</p>
-                    <input type="text">
-                    <p>Ваш email будет полностью конфиденциален.</p>
-                    <hr>
-                    <a href="#"><img src="../img/vk.png" alt="vk"></a>
-                    <a href="#"><img src="../img/youtube.png" alt="youtube"></a>
-                    <a href="#"><img src="../img/vk.png" alt="vk"></a>
-                    <a href="#"><img src="../img/youtube.png" alt="youtube"></a>
-                </div>
-                <div class="col s3">
-                    <h3>Наши контакты</h3>
-                    <div class="contact-info">
-                        <img src="../img/location.png" alt="local">
-                        <b>Адрес:</b>
-                        <p>
-                            Улица Армейская 18-а, Одесса, Украина 65006
-                        </p>
-                    </div>
-                    <div class="contact-info">
-                        <img src="../img/massage.png" alt="local">
-                        <b>Адрес:</b>
-                        <p>
-                            Улица Армейская 18-а, Одесса, Украина 65006
-                        </p>
-                    </div>
-                    <div class="contact-info">
-                        <img src="../img/phone.png" alt="local">
-                        <b>Адрес:</b>
-                        <p>
-                            Улица Армейская 18-а, Одесса, Украина 65006
-                        </p>
-                    </div>
-                </div>
 
+    <div class="row">
+        <div class="col l3 s12">
+            <img class="center center-align" src="../img/logo.png">
+            <h5 class="white-text">ООО НИУККЦПБ</h5>
+
+            <p class="grey-text text-lighten-4">ООО Научно-Исследовательский Учебно-Курсовой Консультационный Центр Промышленной Безопасности</p>
+        </div>
+        <div class="col l3 s12">
+            <h5 class="white-text">Новостная подписка</h5>
+
+
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12 white-text">
+                            <input id="email" type="email" class="validate">
+                            <label for="email" data-error="неверный email" data-success="">Ваш email</label>
+                        </div>
+                    </div>
+
+                    <a href="#" class="waves-effect col s12 waves-light indigo darken-4 btn" >Подписаться</a>
+
+                </form>
             </div>
+        </div>
+
+        <div class="col l3 s12">
+            <h5 class="white-text">Наши Контакты</h5>
+            <div class="col s12 m12 l12"> <p style="margin-top:10%" class="white-text"><i class="small material-icons white-text" style="font-size:15px">email</i> e-mail : pbezpeka@mail.ru </p> </div>
+            <div class="col s12 m12 l12"> <p style="margin-top:5%" class="white-text"><i class="small material-icons white-text" style="font-size:15px">phone</i> тел. : (048) 734 2454 </p> </div>
+
+
+
+        </div>
+
+
+
+        <div class="col l3 s12">
+
+            <h5 class="white-text">Как нас найти</h5>
+
+            <iframe class="col l12 s12 m12" style = "height: 80%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.448883510141!2d30.751237315591005!3d46.45961597912534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1a2758dbf92c21bc!2z0J7QntCeINCd0LDRg9GH0L3Qvi3QmNGB0YHQu9C10LTQvtCy0LDRgtC10LvRjNGB0LrQuNC5INCj0YfQtdCx0L3Qvi3QmtGD0YDRgdC-0LLQvtC5INCa0L7QvdGB0YPQu9GM0YLQsNGG0LjQvtC90L3Ri9C5INCm0LXQvdGC0YAg0J_RgNC-0LzRi9GI0LvQtdC90L3QvtC5INCR0LXQt9C-0L_QsNGB0L3QvtGB0YLQuA!5e0!3m2!1sru!2s!4v1492365926764" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </div>
     <div class="footer-copyright grey darken-4">
@@ -126,6 +149,8 @@
             НИУККЦПБ все права защищены © 2017
         </div>
     </div>
+
+
 </footer>
 
 
