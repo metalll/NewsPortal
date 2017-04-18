@@ -23,15 +23,54 @@
 
         /* label focus color */
         .input-field input:focus + label {
+            color: #1a237e !important;
+        }
+
+        .input-field#autocomplete-input input:focus + label{
+
+            color: white !important;
+        }
+
+        .input-field#autocomplete-input1 input:focus + label{
+
             color: white !important;
         }
         /* label underline focus color */
 
         .input-field input[type=text]:focus + label {
+            color: #1a237e !important;
+        }
+        .input-field input[type=tel]:focus + label {
+            color: #1a237e !important;
+        }
+
+
+        .input-field#autocomplete-input input[type=text]:focus + label {
             color: #fff;
         }
+
+        .input-field#autocomplete-input1 input[type=text]:focus + label {
+            color: #fff;
+        }
+
+
         /* label underline focus color */
         .input-field input[type=text]:focus {
+            border-bottom: 1px solid #1a237e;
+            box-shadow: 0 1px 0 0 #1a237e;
+        }
+
+        .input-field input[type=tel]:focus {
+            border-bottom: 1px solid #1a237e;
+            box-shadow: 0 1px 0 0 #1a237e;
+        }
+
+        .input-field#autocomplete-input input[type=text]:focus {
+            border-bottom: 1px solid #fff;
+            box-shadow: 0 1px 0 0 #fff;
+        }
+
+        .input-field#autocomplete-input1 input[type=text]:focus {
             border-bottom: 1px solid #fff;
             box-shadow: 0 1px 0 0 #fff;
         }
@@ -47,8 +86,15 @@
         }
         /* icon prefix focus color */
         .input-field .prefix.active {
+            color: #1a237e;
+        }
+
+        .nav.input-field .prefix.active {
             color: #fff;
         }
+
+
+
 
         .dropdown-content li > a, .dropdown-content li > span {
             color: #1a237e !important;
@@ -123,13 +169,63 @@
 
 
 <div id="call_dialog" class="modal">
+    <style>
+
+
+        /* label focus color */
+
+
+
+    </style>
+
+
     <div class="modal-content">
-        <h4>Обратный звонок</h4>
-        <p>A bunch of text</p>
+
+
+
+        <h4 class="center center-align">Обратный звонок</h4>
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Вас зовут</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="icon_telephone" type="tel" class="validate">
+                        <label for="icon_telephone">Ваш Телефон</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <select>
+                            <option value="" disabled selected>Выберите вариант</option>
+                            <option value="1">Обучение</option>
+                            <option value="2">Разработка докуметнации</option>
+                            <option value="3">Пожарная сигнализация</option>
+                            <option value="4">Проведение электроизмерений</option>
+                            <option value="5">Аутсорсинг</option>
+                            <option value="5">Комплектующие продукции Бирюза</option>
+                            <option value="0">Другое...</option>
+                        </select>
+                        <label>Что вас именно интресует</label>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+
+        <div class="row col s12 center center-align">
+            <a href="#!" class=" col s6 modal-action modal-close waves-effect green darker-3 white-text waves-green btn-flat">Заказать обратный звонок</a>
+            <a href="#!" class=" col s5 push-s1 modal-action modal-close waves-effect red darker-3 white-text waves-green btn-flat">Закрыть окно</a>
+        </div>
+
+
     </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
+
 </div>
 
 
@@ -149,7 +245,7 @@
 
         <h2 class="center center-align " style="margin-top: 5%; margin-right: 10%; ">Уже на протяжении 16 лет</h2>
 
-        <p class="left left-align white-text " style="width: 40%; font-size: 18px; color: #c5cae9; margin-top: 3% ; margin-left: 2%">Наш центр промышленной безопасности занимает лидирующие позиции на рынке промыщленной безопасности в Украине. Во многом эта заслуга каждого нашего сотрудника, именно они развивают наш центер каждый день. Увеличивают спектр отраслевых практик, услуг, ведут для вас новостной контент, чтобы каждый наш клиент всегда был в курсе последних событий. НИУККЦПБ - в первую очередь люди в которые в нем работают!</p>
+        <p class="left left-align white-text " style="width: 40%; font-size: 18px; color: #c5cae9; margin-top: 3% ; margin-left: 2%">Наш центр промышленной безопасности занимает лидирующие позиции на рынке промыщленной безопасности в Украине. Во многом эта заслуга каждого нашего сотрудника, именно они развивают наш центер каждый день. НИУККЦПБ - в первую очередь люди в которые в нем работают!</p>
     </div>
     <div class="carousel-item white-text" href="#two!" style="background: url('img/bg-attestat.jpg') center center fixed;  -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -375,6 +471,17 @@
                 <a href="#!" class="secondary-content "><i class="material-icons medium indigo-text text-darken-4">forward</i></a>
             </li>
 
+            <li class="collection-item avatar">
+                <img src="img/dark_logo.png" alt="" class="circle">
+                <span class="title indigo-text text-darken-4 ">Сайт вернулся!</span>
+                <p style="width: 77%; font-size: 15px"> Что - то произошло и сайт снова с нами!<br>
+                    <span class="right right-align" style="font-size: 11px"> 01 января 2017 года</span>
+                    <br>
+                </p>
+                <a href="#!" class="secondary-content "><i class="material-icons medium indigo-text text-darken-4">forward</i></a>
+            </li>
+
+
 
             <li class="collection-item avatar">
                 <img src="img/dark_logo.png" alt="" class="circle">
@@ -405,8 +512,6 @@
                 </p>
                 <a href="#!" class="secondary-content "><i class="material-icons medium indigo-text text-darken-4">forward</i></a>
             </li>
-
-
 
 
         </ul>
@@ -466,7 +571,7 @@
                 <h5 class="white-text">Наши Контакты</h5>
                 <div class="col s12 m12 l12"> <p style="margin-top:10%" class="white-text"><i class="small material-icons white-text" style="font-size:15px">email</i> e-mail : pbezpeka@mail.ru </p> </div>
                 <div class="col s12 m12 l12"> <p style="margin-top:5%" class="white-text"><i class="small material-icons white-text" style="font-size:15px">phone</i> тел. : (048) 734 2454 </p> </div>
-
+                <div class="col s12 m12 l12"> <p style="margin-top:5%" class="white-text "><i class="small material-icons white-text" style="font-size:15px">location_on</i> пр. Гагарина 6а, Одесса, Украина</p> </div>
 
 
             </div>
@@ -520,6 +625,10 @@
     $( document ).ready(function() {
 
         $(".button-collapse").sideNav();
+
+        $(document).ready(function() {
+            $('select').material_select();
+        });
 
 
 
