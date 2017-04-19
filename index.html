@@ -637,20 +637,19 @@
         var preloader="";
         preloader += "   <div id=\"global_preloader_div\" class=\" col s12 m12 l12 center center-align\">";
         preloader += "";
-        preloader += "        <h4 class=\"black-text center center-align\">Что удалось найти<\/h4>";
+        preloader += "";
         preloader += "        <img id=\"global_preloader\" src=\"images\/bx_loader.gif\">";
         preloader += "    <\/div>";
 
-
-        $('#page_content').innerHTML=preloader;
+        document.getElementById('page_content').innerHTML=preloader;
 
 
         $.ajax({
-            url: "https://pbezpeka.herokuapp.com/NewsPortal/partial/about.html",
+            url: "http://pbezpeka.herokuapp.com/NewsPortal/partial/about.html",
             type:'GET',
             cache: true,
             success: function(html){
-                $('#page_content').innerHTML = html;
+                document.getElementById('page_content').innerHTML= html;
             }
         });
 
