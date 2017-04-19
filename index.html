@@ -49,10 +49,10 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right  hide-on-med-and-down">
             <li><a href="#"  id="company">Компания</a></li>
-            <li><a href="./partial/services.html">Услуги</a></li>
-            <li><a href="./partial/newspage.html">Новости</a></li>
-            <li><a href="./partial/career.html">Карьера</a></li>
-            <li><a href="./partial/contacts.html">Контакты</a></li>
+            <li><a href="#" id="services">Услуги</a></li>
+            <li><a href="#" id="news">Новости</a></li>
+            <li><a href="#" id="career">Карьера</a></li>
+            <li><a href="#" id="contacts">Контакты</a></li>
 
         </ul>
         <ul class="side-nav" id="mobile-demo">
@@ -643,33 +643,33 @@
 
     $('#company').click(function () {
 
-        var preloader="<div class=\"row\">";
-        preloader += "   <div id=\"global_preloader_div\" class=\" col s12 m12 l12 center center-align\">";
-        preloader += "";
-        preloader += "";
-        preloader += "        <img id=\"global_preloader\" src=\"images\/bx_loader.gif\">";
-        preloader += "   <\/div> <\/div>";
+        PageLoader('partial/about.html');
 
-        document.getElementById('page_content').innerHTML=preloader;
+    });
 
+    $('#career').click(function () {
 
-        
-        
-        
-        $.ajax({
-            url: "http://pbezpeka.herokuapp.com/NewsPortal/partial/about.html",
-            type:'GET',
-            cache: true,
-            success: function(html){
-                document.getElementById('page_content').innerHTML= html;
-            }
-        });
+        PageLoader('partial/career.html');
 
+    });
 
+    $('#contacts').click(function () {
 
-    })
+        PageLoader('partial/contacts.html');
 
+    });
 
+    $('#news').click(function () {
+
+        PageLoader('partial/newspage.html');
+
+    });
+
+    $('#services').click(function () {
+
+        PageLoader('partial/services.html');
+
+    });
 
    function PageLoader(url,relative) {
 
@@ -694,7 +694,7 @@
         if(relative==true){
             
 
-          finalUrl   += PathInfo.host + "/" + url;
+          finalUrl   += PathInfo.host + "/NewsPortal/" + url;
 
 
         }else{
