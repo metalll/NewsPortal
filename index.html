@@ -13,102 +13,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>НИУККЦПБ</title>
+    <link rel="stylesheet" href="css/app.css">
 
 
 
 
 
     <!-- Compiled and minified JavaScript -->
-    <style>
-
-        /* label focus color */
-        .input-field input:focus + label {
-            color: #1a237e !important;
-        }
-
-        .input-field#autocomplete-input input:focus + label{
-
-            color: white !important;
-        }
-
-        .input-field#autocomplete-input1 input:focus + label{
-
-            color: white !important;
-        }
-        /* label underline focus color */
-
-        .input-field input[type=text]:focus + label {
-            color: #1a237e !important;
-        }
-        .input-field input[type=tel]:focus + label {
-            color: #1a237e !important;
-        }
-
-
-        .input-field#autocomplete-input input[type=text]:focus + label {
-            color: #fff;
-        }
-
-        .input-field#autocomplete-input1 input[type=text]:focus + label {
-            color: #fff;
-        }
-
-
-        /* label underline focus color */
-        .input-field input[type=text]:focus {
-            border-bottom: 1px solid #1a237e;
-            box-shadow: 0 1px 0 0 #1a237e;
-        }
-
-        .input-field input[type=tel]:focus {
-            border-bottom: 1px solid #1a237e;
-            box-shadow: 0 1px 0 0 #1a237e;
-        }
-
-        .input-field#autocomplete-input input[type=text]:focus {
-            border-bottom: 1px solid #fff;
-            box-shadow: 0 1px 0 0 #fff;
-        }
-
-        .input-field#autocomplete-input1 input[type=text]:focus {
-            border-bottom: 1px solid #fff;
-            box-shadow: 0 1px 0 0 #fff;
-        }
-        /* valid color */
-        .input-field input[type=text].valid {
-            border-bottom: 1px solid #fff;
-            box-shadow: 0 1px 0 0 #fff;
-        }
-        /* invalid color */
-        .input-field input[type=text].invalid {
-            border-bottom: 1px solid #fff;
-            box-shadow: 0 1px 0 0 #fff;
-        }
-        /* icon prefix focus color */
-        .input-field .prefix.active {
-            color: #1a237e;
-        }
-
-        .nav.input-field .prefix.active {
-            color: #fff;
-        }
-
-
-
-
-        .dropdown-content li > a, .dropdown-content li > span {
-            color: #1a237e !important;
-        }
-
-    </style>
 
 
 </head>
-<body>
+<>
 
-<h1 class="hide"> dvwevgfwergfvrvergvwefv </h1>
-
+<h1 class="hide" id="active_tags"></h1>
+<script type="text/javascript" src="js/ClassEditor.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/SearchSystem.js"></script>
+<script scr="js/ImportSystem.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
 
@@ -127,23 +48,36 @@
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li class="indigo darken-4">
-                <div class="row" id="search_container1">
+                <div class="row" id="search_container_mobile">
                 <div class="col s12 white-text indigo darken-4">
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix" >search</i>
-                        <input type="text" id="autocomplete-input1" class="autocomplete">
+                        <input type="text" id="autocomplete-input_mobile" class="autocomplete">
 
-                        <label for="autocomplete-input1">Поиск</label>
+                        <label for="autocomplete-input_mobile">Поиск</label>
 
                     </div>
                 </div>
                 </div></div></li>
-            <li><a href="./partial/about.html">Компания</a></li>
-            <li><a href="./partial/services.html">Услуги</a></li>
-            <li><a href="./partial/newspage.html">Новости</a></li>
-            <li><a href="./partial/career.html">Карьера</a></li>
-            <li><a href="./partial/contacts.html">Контакты</a></li>
+
+
+
+
+            <li id = "mob_company"><a href="./partial/about.html">Компания</a></li>
+            <li id = "mob_services"><a href="./partial/services.html">Услуги</a></li>
+            <li id = "mob_news"><a href="./partial/newspage.html">Новости</a></li>
+            <li id = "mob_career"><a href="./partial/career.html">Карьера</a></li>
+            <li id=  "mob_contacts"><a href="./partial/contacts.html">Контакты</a></li>
+            <li class="hide" id="search_result_mobile"><div class="row valign-wrapper">
+
+                <div id="search_result_mob_div" class="col s12 m12 l12 center center-align">
+                    <h5 class="black-text center center-align">Что удалось найти</h5>
+                 <img id="mob_preloader" src="images/bx_loader.gif">
+                </div>
+
+
+            </div></li>
         </ul>
 
 
@@ -230,7 +164,7 @@
 
 
 
-
+<div id="page_content">
 
 <div class="carousel carousel-slider center hide-on-small-only" data-indicators="true" >
     <div class="carousel-fixed-item center">
@@ -530,69 +464,29 @@
     <a class="carousel-item" href="#three!"><img src="img/okko_logo.gif" style="width:200px;height:200px;overflow:hidden; top: 0; bottom:0; left: 0; right:0; margin: auto;"></a>
     <a class="carousel-item" href="#four!"><img src="img/logo.jpg" style="width:200px;height:200px;overflow:hidden; top: 0; bottom:0; left: 0; right:0; margin: auto;"></a>
     <a class="carousel-item" href="#five!"><img src="img/icon350x350.png" style="width:200px;height:200px;overflow:hidden; top: 0; bottom:0; left: 0; right:0; margin: auto;"></a>
+    <a class="carousel-item" href="#six!"><img src="img/ais_auto_logo.png" style="width:200px;height:200px;overflow:hidden; top: 0; bottom:0; left: 0; right:0; margin: auto;"></a>
+    <a class="carousel-item" href="#six!"><img src="img/adm_logo.png" style="width:200px;height:200px;overflow:hidden; top: 0; bottom:0; left: 0; right:0; margin: auto;"></a>
+    <a class="carousel-item" href="#six!"><img src="img/dakcc_logo.png" style="width:200px;height:200px;overflow:hidden; top: 0; bottom:0; left: 0; right:0; margin: auto;"></a>
+    <a class="carousel-item" href="#six!"><img src="img/delta_vilmar_logo.png" style="width:200px;height:200px;overflow:hidden; top: 0; bottom:0; left: 0; right:0; margin: auto;"></a>
+    <a class="carousel-item" href="#six!"><img src="img/intostroy_logo.png" style="width:200px;height:200px;overflow:hidden; top: 0; bottom:0; left: 0; right:0; margin: auto;"></a>
+    <a class="carousel-item" href="#six!"><img src="img/vectt_logo.png" style="width:200px;height:200px;overflow:hidden; top: 0; bottom:0; left: 0; right:0; margin: auto;"></a>
 </div>
 
 
 
+</div>
 
+<div id = "search_result" class="hide row">
 
+    <div id="search_result_div" class=" col s12 m12 l12 center center-align">
 
-<footer class="page-footer grey darken-3">
-
-
-        <div class="row">
-            <div class="col l3 s12">
-                <img class="center center-align" src="img/logo.png">
-                <h5 class="white-text">ООО НИУККЦПБ</h5>
-
-                <p class="grey-text text-lighten-4">ООО Научно-Исследовательский Учебно-Курсовой Консультационный Центр Промышленной Безопасности</p>
-            </div>
-            <div class="col l3 s12">
-                <h5 class="white-text">Новостная подписка</h5>
-
-
-
-                <div class="row">
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s12 white-text">
-                                <input id="email" type="email" class="validate">
-                                <label for="email" data-error="неверный email" data-success="">Ваш email</label>
-                            </div>
-                        </div>
-
-                        <a href="#" class="waves-effect col s12 waves-light indigo darken-4 btn" >Подписаться</a>
-
-                    </form>
-                </div>
-            </div>
-
-            <div class="col l3 s12">
-                <h5 class="white-text">Наши Контакты</h5>
-                <div class="col s12 m12 l12"> <p style="margin-top:10%" class="white-text"><i class="small material-icons white-text" style="font-size:15px">email</i> e-mail : pbezpeka@mail.ru </p> </div>
-                <div class="col s12 m12 l12"> <p style="margin-top:5%" class="white-text"><i class="small material-icons white-text" style="font-size:15px">phone</i> тел. : (048) 734 2454 </p> </div>
-                <div class="col s12 m12 l12"> <p style="margin-top:5%" class="white-text "><i class="small material-icons white-text" style="font-size:15px">location_on</i> пр. Гагарина 6а, Одесса, Украина</p> </div>
-
-
-            </div>
-
-
-
-            <div class="col l3 s12">
-
-                <h5 class="white-text">Как нас найти</h5>
-
-                <iframe class="col l12 s12 m12" style = "height: 80%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.448883510141!2d30.751237315591005!3d46.45961597912534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1a2758dbf92c21bc!2z0J7QntCeINCd0LDRg9GH0L3Qvi3QmNGB0YHQu9C10LTQvtCy0LDRgtC10LvRjNGB0LrQuNC5INCj0YfQtdCx0L3Qvi3QmtGD0YDRgdC-0LLQvtC5INCa0L7QvdGB0YPQu9GM0YLQsNGG0LjQvtC90L3Ri9C5INCm0LXQvdGC0YAg0J_RgNC-0LzRi9GI0LvQtdC90L3QvtC5INCR0LXQt9C-0L_QsNGB0L3QvtGB0YLQuA!5e0!3m2!1sru!2s!4v1492365926764" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-        </div>
-    <div class="footer-copyright grey darken-4">
-        <div class="container center">
-            НИУККЦПБ все права защищены © 2017
-        </div>
+        <h4 class="black-text center center-align">Что удалось найти</h4>
+        <img id="preloader" src="images/bx_loader.gif">
     </div>
 
+</div>
 
-</footer>
+
 
 
 </body>
@@ -600,12 +494,22 @@
 
 
 
+
+
+<div data-include="http://pbezpeka.herokuapp.com/NewsPortal/components/footer.html"></div>
+
+
+
 <script>
     var caruselBoolFlag = true;
 
 
+
+
+
+
     $('.modal').modal({
-            dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
             opacity: .8, // Opacity of modal background
             inDuration: 100, // Transition in duration
             outDuration: 100, // Transition out duration
@@ -619,9 +523,6 @@
         }
     );
 
-
-
-
     $( document ).ready(function() {
 
         $(".button-collapse").sideNav();
@@ -629,8 +530,6 @@
         $(document).ready(function() {
             $('select').material_select();
         });
-
-
 
         $('input.autocomplete').autocomplete({
             data: {
@@ -650,11 +549,11 @@
 
 
             $('.carousel').carousel(
-                {   duration:80,
+                {   duration:100,
                     dist:-60,
-                    padding:80,
+                    padding:10,
                     indicators:true,
-                    shift:50,
+                    shift:100,
 
                 }
 
