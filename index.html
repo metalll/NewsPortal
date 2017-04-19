@@ -6,7 +6,10 @@
 
     <script>
 
-        if(getPathInfo(window.location.href).protocol=='http:'){
+
+
+
+        if(window.location.protocol=='http:'){
            document.write(" <link href=\"http:\/\/fonts.googleapis.com\/icon?family=Material+Icons\" rel=\"stylesheet\">");
 
         }else{
@@ -686,15 +689,15 @@
        var finalUrl = '';
 
 
-        var PathInfo = getPathInfo(window.location.href);
 
-        finalUrl += PathInfo.protocol+ "//" ;
+
+        finalUrl += window.location.protocol+ '//' ;
 
 
         if(relative==true){
             
 
-          finalUrl   += PathInfo.host + "/NewsPortal/" + url;
+          finalUrl   += window.location.host + "/NewsPortal/" + url;
 
 
         }else{
@@ -718,20 +721,7 @@
 
    }
 
-    function getPathInfo(path) {
-        //  create a link in the DOM and set its href
-        var link = document.createElement('a');
-        link.setAttribute('href', path);
 
-        //  return an easy-to-use object that breaks apart the path
-        return {
-            host:     link.hostname,  //  'example.com'
-            port:     link.port,      //  12345
-            search:   processSearchParams(link.search),  //  {startIndex: 1, pageSize: 10}
-            path:     link.pathname,  //  '/blog/foo/bar'
-            protocol: link.protocol   //  'http:'
-        }
-    }
     
 
 
