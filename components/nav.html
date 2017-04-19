@@ -1,5 +1,12 @@
 <nav>
 
+
+    <script type="text/javascript" src="js/ClassEditor.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/SearchSystem.js"></script>
+    <script src="js/ImportSystem.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
     <div class="nav-wrapper indigo darken-4">
         <a href="#" class="brand-logo" ><img src="img/logo.png" style="margin-top: 2px"></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -63,7 +70,6 @@
 
     </div>
 
-    <script src="../js/SearchSystem.js"></script>
     <script>
 
         $( document ).ready(function() {
@@ -73,6 +79,9 @@
             $(document).ready(function () {
                 $('select').material_select();
             });
+
+
+            $(".button-collapse").sideNav();
 
             $('input.autocomplete').autocomplete({
                 data: {
