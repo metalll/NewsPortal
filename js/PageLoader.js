@@ -126,7 +126,10 @@ function PageLoader(url,relative) {
 
             }
 
-            jQuery.ready();
+
+            $('select').material_select();
+
+
         }
     });
 
