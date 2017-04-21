@@ -73,6 +73,8 @@ function PageLoader(url,relative) {
             if(url.indexOf('index_content')){
                 index_content();
             }
+
+            jQuery.ready();
         }
     });
 
