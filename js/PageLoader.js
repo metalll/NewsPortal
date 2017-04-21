@@ -71,16 +71,19 @@ function PageLoader(url,relative) {
 
 }
 
-window.onhashchange = function () {
 
 
-    //blah blah blah
-    var navItem = navigationStack.pop();
-    PageLoader(navItem.url,navItem.relative);
+$(window).on('popstate', function (e) {
+    var state = e.originalEvent.state;
+    if (state !== null) {
+
+        var navItem = navigationStack.pop();
+        PageLoader(navItem.url,navItem.relative);
+
+        //load content with ajax
+    }
 
 
-
-
-}
+});
 
 
