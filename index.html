@@ -5,10 +5,6 @@
     <!-- stylesheet-->
 
     <script>
-
-
-
-
         if(window.location.protocol=='http:'){
            document.write(" <link href=\"http:\/\/fonts.googleapis.com\/icon?family=Material+Icons\" rel=\"stylesheet\">");
 
@@ -38,13 +34,13 @@
 <body>
 
 <h1 class="hide" id="active_tags"></h1>
-<script type="text/javascript" src="js/ClassEditor.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/SearchSystem.js"></script>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
-
+<script src="js/ClassEditor.js"></script>
+<script src="js/SearchSystem.js"></script>
+<script src="js/PageLoader.js"></script>
 <nav>
 
     <div class="nav-wrapper indigo darken-4">
@@ -252,6 +248,28 @@
 
     <div class="row">
         <div class="row">
+
+
+
+            <div class="row col s12 m12 l4">
+                <div class="col s12 m12 l12">
+                    <div class="hoverable large card">
+                        <div class="card-image">
+                            <img class="center center-align" style = " object-fit: cover;  height:200px;"  src="img/Collaborative-Thinking.png">
+                            <span class="card-title left left-align">Экспертиза</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Целью БЖ также является снижение риска возникновения чрезвычайной ситуации по вине человеческого фактора.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+
+                        </div>
+                        <div class="card-action center-align">
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/expertize.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="row col s12 m12 l4">
                 <div class="col s12 m12 l12">
                     <div class="hoverable large card">
@@ -264,11 +282,33 @@
 
                         </div>
                         <div class="card-action center-align">
-                            <p> <a href="service/education.html" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/education.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
+            <div class="row col s12 m12 l4 ">
+                <div class="col s12 m12 l12">
+                    <div class="hoverable large card">
+                        <div class="card-image">
+                            <img class="center left left-align" style = " object-fit: cover;  height:200px;"  src="img/outsourcing.png">
+                            <span class="card-title center center-align">Аутсорсинг</span>
+                        </div>
+                        <div class="card-content left left-align">
+                            <p>Разработка документации по всем пунктам промышленной безопасности</p>
+                        </div>
+                        <div class="card-action center-align">
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/outsourcing.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
 
 
             <div class="row col s12 m12 l4">
@@ -282,37 +322,55 @@
                             <p>Разработка документации по всем пунктам промышленной безопасности</p>
                         </div>
                         <div class="card-action center-align">
-                            <p> <a href="service/dev_doc.html" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/dev_doc.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <div class="row">
+
                 <div class="row col s12 m12 l4">
                     <div class="col s12 m12 l12">
                         <div class="hoverable large card">
                             <div class="card-image">
-                                <img class="center center-align" style = " object-fit: cover;  height:200px;"  src="img/fire_alert.png">
-                                <span class="card-title left left-align">Пожарная сигнализация</span>
+                                <img class="center center-align" style = " object-fit: cover;  height:200px;"  src="img/project.jpg">
+                                <span class="card-title left left-align">Проектирование</span>
                             </div>
                             <div class="card-content left left-align">
                                 <p>Проектирование, монтаж и сервисное обслуживание пожарной сигнализации</p>
                             </div>
                             <div class="card-action center-align">
-                                <p> <a href="service/fire_alert.html" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>  </p>
+                                <p> <a href="javascript:void(0);" onclick="PageLoader('service/project.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <div class="row col s12 m12 l4">
+                <div class="col s12 m12 l12">
+                    <div class="hoverable  large card">
+                        <div class="card-image">
+                            <img class="center center-align " style = " object-fit: cover;  height:200px;"  src="img/fire_alert.png">
+                            <span class="card-title left left-align">Пожарная сигнализация</span>
+                        </div>
+                        <div class="card-content left left-align">
+                            <p>Проектирование, монтаж и сервисное обслуживание пожарной сигнализации</p>
+                        </div>
+                        <div class="card-action center-align">
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/fire_alert.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>  </p>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-        </div></div>
+        </div>
+    </div>
 
     <div class="row">
-        <div class="col l2"></div>
+        <div class="col l4"></div>
         <div class="row col s12 m12 l4">
             <div class="col s12 m12 l12">
                 <div class="hoverable large card">
@@ -324,29 +382,14 @@
                         <p>Выполняем лабораторные электротехнические измерения и испытания в электроустановках до и свыше 1000 В.</p>
                     </div>
                     <div class="card-action center-align">
-                        <p> <a href="service/electric.html" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
+                        <p> <a href="javascript:void(0);" onclick="PageLoader('service/electric.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="row col s12 m12 l4 ">
-            <div class="col s12 m12 l12">
-                <div class="hoverable large card">
-                    <div class="card-image">
-                        <img class="center left left-align" style = " object-fit: cover;  height:200px;"  src="img/outsourcing.png">
-                        <span class="card-title center center-align">Аутсорсинг</span>
-                    </div>
-                    <div class="card-content left left-align">
-                        <p>Разработка документации по всем пунктам промышленной безопасности</p>
-                    </div>
-                    <div class="card-action center-align">
-                        <p> <a href="service/outsourcing.html" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
 
 
@@ -459,6 +502,47 @@
                 <a href="#!" class="secondary-content "><i class="material-icons medium indigo-text text-darken-4">forward</i></a>
             </li>
 
+            <li class="collection-item avatar">
+                <img src="img/dark_logo.png" alt="" class="circle">
+                <span class="title indigo-text text-darken-4 ">Сайт вернулся!</span>
+                <p style="width: 77%; font-size: 15px"> Что - то произошло и сайт снова с нами!<br>
+                    <span class="right right-align" style="font-size: 11px"> 01 января 2017 года</span>
+                    <br>
+                </p>
+                <a href="#!" class="secondary-content "><i class="material-icons medium indigo-text text-darken-4">forward</i></a>
+            </li>
+
+            <li class="collection-item avatar">
+                <img src="img/dark_logo.png" alt="" class="circle">
+                <span class="title indigo-text text-darken-4 ">Сайт вернулся!</span>
+                <p style="width: 77%; font-size: 15px"> Что - то произошло и сайт снова с нами!<br>
+                    <span class="right right-align" style="font-size: 11px"> 01 января 2017 года</span>
+                    <br>
+                </p>
+                <a href="#!" class="secondary-content "><i class="material-icons medium indigo-text text-darken-4">forward</i></a>
+            </li>
+
+
+            <li class="collection-item avatar">
+                <img src="img/dark_logo.png" alt="" class="circle">
+                <span class="title indigo-text text-darken-4 ">Сайт вернулся!</span>
+                <p style="width: 77%; font-size: 15px"> Что - то произошло и сайт снова с нами!<br>
+                    <span class="right right-align" style="font-size: 11px"> 01 января 2017 года</span>
+                    <br>
+                </p>
+                <a href="#!" class="secondary-content "><i class="material-icons medium indigo-text text-darken-4">forward</i></a>
+            </li>
+
+
+            <li class="collection-item avatar">
+                <img src="img/dark_logo.png" alt="" class="circle">
+                <span class="title indigo-text text-darken-4 ">Сайт вернулся!</span>
+                <p style="width: 77%; font-size: 15px"> Что - то произошло и сайт снова с нами!<br>
+                    <span class="right right-align" style="font-size: 11px"> 01 января 2017 года</span>
+                    <br>
+                </p>
+                <a href="#!" class="secondary-content "><i class="material-icons medium indigo-text text-darken-4">forward</i></a>
+            </li>
 
         </ul>
 
@@ -673,53 +757,6 @@
         PageLoader('partial/services.html',true);
 
     });
-
-   function PageLoader(url,relative) {
-
-       var preloader="<div class=\"row\">";
-       preloader += "   <div id=\"global_preloader_div\" class=\" col s12 m12 l12 center center-align\">";
-       preloader += "";
-       preloader += "";
-       preloader += "        <img id=\"global_preloader\" src=\"images\/bx_loader.gif\">";
-       preloader += "   <\/div> <\/div>";
-
-       document.getElementById('page_content').innerHTML=preloader;
-
-
-       var finalUrl = '';
-
-
-
-
-        finalUrl += window.location.protocol+ '//' ;
-
-
-        if(relative==true){
-            
-
-          finalUrl   += window.location.host + "/NewsPortal/" + url;
-
-
-        }else{
-
-            finalUrl += url
-
-        }
-        
-        
-        
-        
-
-       $.ajax({
-           url: finalUrl,
-           type:'GET',
-           cache: true,
-           success: function(html){
-               document.getElementById('page_content').innerHTML= html;
-           }
-       });
-
-   }
 
 
     

@@ -1,77 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
 
-    <!-- stylesheet-->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta charset="UTF-8">
-    <title>НИУККЦПБ</title>
-</head>
 <body>
 
-<nav>
-
-    <div class="nav-wrapper indigo darken-4">
-        <a href="../index.html" class="brand-logo" ><img src="../img/logo.png" style="margin-top: 2px"></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right  hide-on-med-and-down">
-            <li><a href="./about.html">Компания</a></li>
-            <li><a href="#" class="active">Услуги</a></li>
-            <li><a href="./newspage.html">Новости</a></li>
-            <li><a href="./career.html">Карьера</a></li>
-            <li><a href="./contacts.html">Контакты</a></li>
-
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-            <li><a href="./about.html">Компания</a></li>
-            <li><a href="#" class="active">Услуги</a></li>
-            <li><a href="./newspage.html">Новости</a></li>
-            <li><a href="./career.html">Карьера</a></li>
-            <li><a href="./contacts.html">Контакты</a></li>
-        </ul>
-
-        <form style="margin-left:200px ; width: 350px" class="hide-on-med-and-down">
-            <div class="input-field">
-                <input id="search" type="search" required>
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
-            </div>
-        </form>
 
 
-    </div>
-
-</nav>
-
-
-<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large green" href="#call_dialog">
-        <i class="material-icons">call</i>
-    </a>
-</div>
-
-
-
-<h3 class="center"> Наши услуги </h3>
-<div class="services-container">
+<div class="col s12 m8 l9" style="margin-top:10px">
+    <h3 class="center"> Наши услуги </h3>
 
     <div class="row">
         <div class="row">
+
+
+
             <div class="row col s12 m12 l4">
                 <div class="col s12 m12 l12">
-                    <div class="medium card">
+                    <div class="hoverable large card">
                         <div class="card-image">
-                            <img class="center center-align" style = " object-fit: cover;  height:210px;"  src="../img/edu.png">
-                            <span class="card-title center center-align">Обучение</span>
+                            <img class="center center-align" style = " object-fit: cover;  height:200px;"  src="img/Collaborative-Thinking.png">
+                            <span class="card-title left left-align">Экспертиза</span>
                         </div>
                         <div class="card-content">
                             <p>Целью БЖ также является снижение риска возникновения чрезвычайной ситуации по вине человеческого фактора.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
 
                         </div>
                         <div class="card-action center-align">
-                            <p> <a href="../service/education.html" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/expertize.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
                         </div>
                     </div>
                 </div>
@@ -80,75 +34,117 @@
 
             <div class="row col s12 m12 l4">
                 <div class="col s12 m12 l12">
-                    <div class="medium card">
+                    <div class="hoverable large card">
                         <div class="card-image">
-                            <img class="center center-align" style = " object-fit: cover;  height:210px;"  src="../img/docs.png">
-                            <span class="card-title center center-align">Разработка докуметнации</span>
+                            <img class="center center-align" style = " object-fit: cover;  height:200px;"  src="img/edu.png">
+                            <span class="card-title left left-align">Обучение</span>
                         </div>
                         <div class="card-content">
+                            <p>Целью БЖ также является снижение риска возникновения чрезвычайной ситуации по вине человеческого фактора.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+
+                        </div>
+                        <div class="card-action center-align">
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/education.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row col s12 m12 l4 ">
+                <div class="col s12 m12 l12">
+                    <div class="hoverable large card">
+                        <div class="card-image">
+                            <img class="center left left-align" style = " object-fit: cover;  height:200px;"  src="img/outsourcing.png">
+                            <span class="card-title center center-align">Аутсорсинг</span>
+                        </div>
+                        <div class="card-content left left-align">
                             <p>Разработка документации по всем пунктам промышленной безопасности</p>
                         </div>
                         <div class="card-action center-align">
-                            <p> <a href="../service/dev_doc.html" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="row col s12 m12 l4">
-                    <div class="col s12 m12 l12">
-                        <div class="medium card">
-                            <div class="card-image">
-                                <img class="center center-align" style = " object-fit: cover;  height:210px;"  src="../img/fire_alert.png">
-                                <span class="card-title center center-align">Пожарная сигнализация</span>
-                            </div>
-                            <div class="card-content">
-                                <p>Проектирование, монтаж и сервисное обслуживание пожарной сигнализации</p>
-                            </div>
-                            <div class="card-action center-align">
-                                <p> <a href="../service/fire_alert.html" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>  </p>
-                            </div>
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/outsourcing.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-        </div></div>
+
+
+
+            <div class="row col s12 m12 l4">
+                <div class="col s12 m12 l12">
+                    <div class="hoverable large card">
+                        <div class="card-image">
+                            <img class="center center-align" style = " object-fit: cover;  height:200px;"  src="img/docs.png">
+                            <span class="card-title left left-align">Разработка докуметнации</span>
+                        </div>
+                        <div class="card-content left left-align">
+                            <p>Разработка документации по всем пунктам промышленной безопасности</p>
+                        </div>
+                        <div class="card-action center-align">
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/dev_doc.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row col s12 m12 l4">
+                <div class="col s12 m12 l12">
+                    <div class="hoverable large card">
+                        <div class="card-image">
+                            <img class="center center-align" style = " object-fit: cover;  height:200px;"  src="img/project.jpg">
+                            <span class="card-title left left-align">Проектирование</span>
+                        </div>
+                        <div class="card-content left left-align">
+                            <p>Проектирование, монтаж и сервисное обслуживание пожарной сигнализации</p>
+                        </div>
+                        <div class="card-action center-align">
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/project.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row col s12 m12 l4">
+                <div class="col s12 m12 l12">
+                    <div class="hoverable  large card">
+                        <div class="card-image">
+                            <img class="center center-align " style = " object-fit: cover;  height:200px;"  src="img/fire_alert.png">
+                            <span class="card-title left left-align">Пожарная сигнализация</span>
+                        </div>
+                        <div class="card-content left left-align">
+                            <p>Проектирование, монтаж и сервисное обслуживание пожарной сигнализации</p>
+                        </div>
+                        <div class="card-action center-align">
+                            <p> <a href="javascript:void(0);" onclick="PageLoader('service/fire_alert.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 
     <div class="row">
-        <div class="col l2"></div>
+        <div class="col l4"></div>
         <div class="row col s12 m12 l4">
             <div class="col s12 m12 l12">
-                <div class="medium card">
+                <div class="hoverable large card">
                     <div class="card-image">
-                        <img class="center center-align" style = " object-fit: cover;  height:210px;"  src="../img/electric.png">
-                        <span class="card-title">Проведение электроизмерений</span>
+                        <img class="center center-align" style = " object-fit: cover;  height:200px;"  src="img/electric.png">
+                        <span class="card-title left left-align">Проведение электроизмерений</span>
                     </div>
                     <div class="card-content">
                         <p>Выполняем лабораторные электротехнические измерения и испытания в электроустановках до и свыше 1000 В.</p>
                     </div>
                     <div class="card-action center-align">
-                        <p> <a href="../service/electric.html" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row col s12 m12 l4 ">
-            <div class="col s12 m12 l12">
-                <div class="medium card">
-                    <div class="card-image">
-                        <img class="center center-align" style = " object-fit: cover;  height:210px;"  src="../img/outsourcing.png">
-                        <span class="card-title center center-align">Аутсорсинг</span>
-                    </div>
-                    <div class="card-content">
-                        <p>Разработка документации по всем пунктам промышленной безопасности</p>
-                    </div>
-                    <div class="card-action center-align">
-                        <p> <a href="../service/outsourcing.html" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
+                        <p> <a href="javascript:void(0);" onclick="PageLoader('service/electric.html',true);" class="waves-effect col s12 waves-light blue darken-4 btn">Подробнее</a>  </p>
                     </div>
                 </div>
             </div>
@@ -157,87 +153,10 @@
 
 
 
-    </div></div>
+
+
+
+    </div>
 </div>
-
-
-
-
-
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-
-<footer class="page-footer grey darken-3">
-
-
-    <div class="row">
-        <div class="col l3 s12">
-            <img class="center center-align" src="../img/logo.png">
-            <h5 class="white-text">ООО НИУККЦПБ</h5>
-
-            <p class="grey-text text-lighten-4">ООО Научно-Исследовательский Учебно-Курсовой Консультационный Центр Промышленной Безопасности</p>
-        </div>
-        <div class="col l3 s12">
-            <h5 class="white-text">Новостная подписка</h5>
-
-
-
-            <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12 white-text">
-                            <input id="email" type="email" class="validate">
-                            <label for="email" data-error="неверный email" data-success="">Ваш email</label>
-                        </div>
-                    </div>
-
-                    <a href="#" class="waves-effect col s12 waves-light indigo darken-4 btn" >Подписаться</a>
-
-                </form>
-            </div>
-        </div>
-
-        <div class="col l3 s12">
-            <h5 class="white-text">Наши Контакты</h5>
-            <div class="col s12 m12 l12"> <p style="margin-top:10%" class="white-text"><i class="small material-icons white-text" style="font-size:15px">email</i> e-mail : pbezpeka@mail.ru </p> </div>
-            <div class="col s12 m12 l12"> <p style="margin-top:5%" class="white-text"><i class="small material-icons white-text" style="font-size:15px">phone</i> тел. : (048) 734 2454 </p> </div>
-
-
-
-        </div>
-
-
-
-        <div class="col l3 s12">
-
-            <h5 class="white-text">Как нас найти</h5>
-
-            <iframe class="col l12 s12 m12" style = "height: 80%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.448883510141!2d30.751237315591005!3d46.45961597912534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1a2758dbf92c21bc!2z0J7QntCeINCd0LDRg9GH0L3Qvi3QmNGB0YHQu9C10LTQvtCy0LDRgtC10LvRjNGB0LrQuNC5INCj0YfQtdCx0L3Qvi3QmtGD0YDRgdC-0LLQvtC5INCa0L7QvdGB0YPQu9GM0YLQsNGG0LjQvtC90L3Ri9C5INCm0LXQvdGC0YAg0J_RgNC-0LzRi9GI0LvQtdC90L3QvtC5INCR0LXQt9C-0L_QsNGB0L3QvtGB0YLQuA!5e0!3m2!1sru!2s!4v1492365926764" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-    </div>
-    <div class="footer-copyright grey darken-4">
-        <div class="container center">
-            НИУККЦПБ все права защищены © 2017
-        </div>
-    </div>
-
-
-</footer>
-
-
 </body>
-
-
-
-
-
-
-<script>
-
-
-    $( document ).ready(function(){
-    })
-
-</script>
 </html>
