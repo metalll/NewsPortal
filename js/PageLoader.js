@@ -75,7 +75,7 @@ function PageLoader(url,relative) {
             }
             if(document.getElementsByClassName('collapsible')!=null){
                 console.log( document.getElementsByClassName('collapsible'));
-                document.getElementsByClassName('collapsible').collapsible();
+                $('.collapsible').collapsible();
             }
             jQuery.ready();
         }
