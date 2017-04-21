@@ -9,7 +9,7 @@ function PageLoader(url,relative) {
 
 
 
-    if(navigationStack==[]||navigationStack.size==0){
+    if(navigationStack==[]||navigationStack.size==0||navigationStack==null){
 
         var navigationItem = new Object();
         navigationItem.url = 'index.html';
@@ -71,9 +71,26 @@ function PageLoader(url,relative) {
 
 }
 
+document.onmouseover = function() {
+    //User's mouse is inside the page.
+    window.innerDocClick = true;
+};
+
+document.onmouseleave = function() {
+    //User's mouse has left the page.
+    window.innerDocClick = false;
+};
+
+window.onhashchange = function() {
+    if (window.innerDocClick) {
+        //Your own in-page mechanism triggered the hash change
+    } else {
+        goBack();
+    }
+};
 
 
-$(window).on('popstate', function (e) {
+function goBack() {
     var navItem = navigationStack.pop();
     if (navItem!=null) {
 
@@ -84,6 +101,6 @@ $(window).on('popstate', function (e) {
     }
 
 
-});
+};
 
 
