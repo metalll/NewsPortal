@@ -61,11 +61,18 @@ function PageLoader(url,relative) {
         cache: true,
         success: function(html){
 
+
+
+
+
             var navigationItem = new Object();
             navigationItem.url = url;
             navigationItem.relative = relative;
             
             document.getElementById('page_content').innerHTML= html;
+            if(url.indexOf('index_content')){
+                index_content();
+            }
         }
     });
 
