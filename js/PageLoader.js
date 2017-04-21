@@ -64,30 +64,13 @@ function PageLoader(url,relative) {
             var navigationItem = new Object();
             navigationItem.url = url;
             navigationItem.relative = relative;
-
+            
             document.getElementById('page_content').innerHTML= html;
         }
     });
 
 }
 
-document.onmouseover = function() {
-    //User's mouse is inside the page.
-    window.innerDocClick = true;
-};
-
-document.onmouseleave = function() {
-    //User's mouse has left the page.
-    window.innerDocClick = false;
-};
-
-window.onhashchange = function() {
-    if (window.innerDocClick) {
-        //Your own in-page mechanism triggered the hash change
-    } else {
-        goBack();
-    }
-};
 
 
 function goBack() {
@@ -103,18 +86,9 @@ function goBack() {
 
 };
 
-
-$(function(){
-    /*
-     * this swallows backspace keys on any non-input element.
-     * stops backspace -> back
-     */
-    var rx = /INPUT|SELECT|TEXTAREA/i;
-
-    $(document).bind("keydown keypress", function(e){
-        if( e.which == 8 ){ // 8 == backspace
-           goBack();
-        }
-    });
+window.addEventListener('popstate', function (e) {
+    var state = e.state;
+    if (state !== null) {
+        goBack();
+    }
 });
-
