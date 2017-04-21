@@ -71,15 +71,15 @@ function PageLoader(url,relative) {
 
 }
 
-function goBack() {
+window.onhashchange = function () {
 
-    window.location.hash = window.location.lasthash[window.location.lasthash.length-1];
+
     //blah blah blah
     var navItem = navigationStack.pop();
     PageLoader(navItem.url,navItem.relative);
 
 
-    window.location.lasthash.pop();
+
 
 }
 
