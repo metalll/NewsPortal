@@ -73,7 +73,9 @@ function PageLoader(url,relative) {
             if(url.indexOf('index_content')){
                 index_content();
             }
-
+            if(document.getElementsByClassName('collapsible')!=null){
+                document.getElementsByClassName('collapsible').collapsible();
+            }
             jQuery.ready();
         }
     });
@@ -94,6 +96,9 @@ function goBack() {
 
 
 };
+
+
+
 
 window.addEventListener('popstate', function (e) {
     var state = e.state;
