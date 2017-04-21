@@ -68,7 +68,8 @@ function PageLoader(url,relative) {
             var navigationItem = new Object();
             navigationItem.url = url;
             navigationItem.relative = relative;
-            
+            navigationStack.push(navigationItem);
+
             document.getElementById('page_content').innerHTML= html;
             if(url.indexOf('index_content')){
                 index_content();
@@ -77,6 +78,26 @@ function PageLoader(url,relative) {
                 console.log( document.getElementsByClassName('collapsible'));
                 $('.collapsible').collapsible();
             }
+
+            if(document.getElementsByClassName('modal')!=null){
+
+                $('.modal').modal({
+                        dismissible:true,
+                        // Modal can be dismissed by clicking outside of the modal
+                        opacity: .8, // Opacity of modal background
+                        inDuration: 100, // Transition in duration
+                        outDuration: 100, // Transition out duration
+                        // Ending top style attribute
+                        ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+                            //    alert("Ready");
+                            console.log(modal, trigger);
+                        },
+                        complete: function() { // alert('Closed');
+                        } // Callback for Modal close
+                    }
+                );
+            }
+
             if(document.getElementsByClassName('carousel')!=null&&document.getElementsByClassName('carousel.carousel-slider')){
                 $('.carousel').carousel(
                     {   duration:100,
