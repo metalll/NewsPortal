@@ -112,17 +112,17 @@ function PageLoader(url,relative) {
 
 
                 $('.carousel.carousel-slider').carousel({fullWidth: true});
-                autoplay();
-                function autoplay() {
-                    if(!caruselBoolFlag){
-                        $('.carousel').carousel('next');
-                    }else {
-
-                        caruselBoolFlag = false;
-                    }
-                    setTimeout(autoplay, 5500);
-                }
-
+               // autoplay();
+               //  function autoplay() {
+               //      if(!caruselBoolFlag){
+               //          $('.carousel').carousel('next');
+               //      }else {
+               //
+               //          caruselBoolFlag = false;
+               //      }
+               //      setTimeout(autoplay, 5500);
+               //  }
+               //
 
             }
 
