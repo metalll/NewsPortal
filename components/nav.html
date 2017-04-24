@@ -1,12 +1,9 @@
 <nav>
-
-
     <script type="text/javascript" src="js/ClassEditor.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/SearchSystem.js"></script>
     <script src="js/ImportSystem.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-
     <div class="nav-wrapper indigo darken-4">
         <a href="#" class="brand-logo" ><img src="img/logo.png" style="margin-top: 2px"></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -16,7 +13,6 @@
             <li><a href="./partial/newspage.html">Новости</a></li>
             <li><a href="./partial/career.html">Карьера</a></li>
             <li><a href="./partial/contacts.html">Контакты</a></li>
-
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li class="indigo darken-4">
@@ -32,27 +28,18 @@
                             </div>
                         </div>
                     </div></div></li>
-
-
-
-
             <li id = "mob_company"><a href="./partial/about.html">Компания</a></li>
             <li id = "mob_services"><a href="./partial/services.html">Услуги</a></li>
             <li id = "mob_news"><a href="./partial/newspage.html">Новости</a></li>
             <li id = "mob_career"><a href="./partial/career.html">Карьера</a></li>
             <li id=  "mob_contacts"><a href="./partial/contacts.html">Контакты</a></li>
             <li class="hide" id="search_result_mobile"><div class="row valign-wrapper">
-
                 <div id="search_result_mob_div" class="col s12 m12 l12 center center-align">
                     <h5 class="black-text center center-align">Что удалось найти</h5>
                     <img id="mob_preloader" src="images/bx_loader.gif">
                 </div>
-
-
             </div></li>
         </ul>
-
-
         <div class="row hide-on-med-and-down" id="search_container" style=" margin-left:200px ; padding-top: 1px; width: 450px">
             <div class="col s12 ">
                 <div class="row">
@@ -64,14 +51,9 @@
                 </div>
             </div>
         </div>
-
-
-
-
     </div>
 
     <script>
-
         $( document ).ready(function() {
 
             $(".button-collapse").sideNav();
@@ -79,8 +61,6 @@
             $(document).ready(function () {
                 $('select').material_select();
             });
-
-
 
             $('input.autocomplete').autocomplete({
                 data: {
@@ -127,7 +107,5 @@
 
 
         })
-
-
     </script>
 </nav>
