@@ -709,6 +709,8 @@
 
 
         $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+        if(!caruselBoolFlag){return;}
         autoplay();
         function autoplay() {
             if(!caruselBoolFlag){
