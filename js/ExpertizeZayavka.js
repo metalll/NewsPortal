@@ -47,7 +47,7 @@ function handleZayavka(inputRadio) {
     $('select').material_select();
 
 
-
+    window.scrollTo(0,window.scrollMaxY);
 
 
 }
