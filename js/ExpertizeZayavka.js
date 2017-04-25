@@ -18,7 +18,7 @@ function handleZayavka(inputRadio) {
 
 
 
-    if(inputRadio.id=='exp_zost_obl'){
+    if(inputRadio.id=='exp_zost_obl'||inputRadio.id=='exp_zost_post'||inputRadio.id=='exp_zost_vendor'){
 
 
         list += "      <li class=\"collection-item\"> <p><input type=\"checkbox\" id=\"1\" \/><label for=\"1\">Устаткування, пов'язане з використанням, виготовленням, переробкою, зберіганням, транспортуванням, утилізацією чи знешкодженням небезпечних або шкідливих речовин.<\/label> <\/p> <\/li>";
