@@ -143,6 +143,51 @@ function handleZayavka(inputRadio) {
     list += "    <\/ul>";
 
 
+    if(inputRadio.id=='exp_zost_obl'||inputRadio.id=='exp_zost_post'||inputRadio.id=='exp_zost_vendor'){
+
+        list += "";
+        list += "        <div class=\"row\">";
+        list += "        <table class=\"col s12 m12 l12\" id = \"table\">";
+        list += "            <thead>";
+        list += "            <tr>";
+        list += "                <th>Найменування, тип, марка обладнання<\/th>";
+        list += "                <th>Кількість<\/th>";
+        list += "                <th>Країна-виробник<\/th>";
+        list += "                <th>Рік випуску<\/th>";
+        list += "            <\/tr>";
+        list += "            <\/thead>";
+        list += "            <tbody>";
+        list += "            <tr>";
+        list += "                <td>";
+        list += "                    <div class=\"input-field col s6\">";
+        list += "                        <input id=\"name\" type=\"text\" class=\"validate\">";
+        list += "                        <label for=\"name\">Найменування, тип, марка обладнання<\/label>";
+        list += "                    <\/div>";
+        list += "                <\/td>";
+        list += "                <td>";
+        list += "                    <div class=\"input-field col s6\">";
+        list += "                        <input id=\"elem_size\" type=\"number\" class=\"validate\">";
+        list += "                        <label for=\"elem_size\">Кількість<\/label>";
+        list += "                    <\/div>";
+        list += "                <\/td>";
+        list += "                <td> <div class=\"input-field col s6\">";
+        list += "                    <input id=\"country_vendor\" type=\"text\" class=\"validate\">";
+        list += "                    <label for=\"country_vendor\">Країна-виробник<\/label>";
+        list += "                <\/div><\/td>";
+        list += "                <td> <div class=\"input-field col s6\">";
+        list += "                    <input id=\"date_vendor\" type=\"text\" class=\"validate\">";
+        list += "                    <label for=\"date_vendor\">Рік випуску<\/label>";
+        list += "                <\/div><\/td>";
+        list += "";
+        list += "            <\/tr>";
+        list += "           ";
+        list += "            <\/tbody>";
+        list += "        <\/table>";
+        list += "        <\/div>";
+
+
+    }
+
 
 
     document.getElementById('zayavka_container').innerHTML = list;
