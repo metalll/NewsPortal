@@ -9,7 +9,7 @@ function handleZayavka(inputRadio) {
 
 
     var list="";
-    list += " <ul class=\"collection\">";
+    list += " <ul class=\"collection left left-align\">";
 
 
 
@@ -17,9 +17,7 @@ function handleZayavka(inputRadio) {
 
 
 
-    list += "  <div class=\"input-field col s12\">";
-    list += "            <select multiple>";
-    list += "                <option value=\"\" disabled selected>Оберіть пункти<\/option>";
+
     if(inputRadio.id=='exp_zost_obl'){
 
 
@@ -143,6 +141,10 @@ function handleZayavka(inputRadio) {
     // list += "                <option value=\"2\">Option 2<\/option>";
     // list += "                <option value=\"3\">Option 3<\/option>";
     list += "    <\/ul>";
+
+
+
+
     document.getElementById('zayavka_container').innerHTML = list;
 
     //$('select').material_select();
