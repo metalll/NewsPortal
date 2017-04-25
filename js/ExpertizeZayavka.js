@@ -16,6 +16,7 @@ function handleZayavka(inputRadio) {
 
     document.getElementById('zayavka_container').innerHTML = list;
 
+    $('select').material_select();
 
 
 
