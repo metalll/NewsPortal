@@ -70,7 +70,7 @@
 .nav.input-field .prefix.active {
     color: #fff;
 }
-
+.modal { width: 75% !important ; height: 75% !important ; }
 
 
 
