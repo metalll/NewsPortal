@@ -189,9 +189,21 @@ function handleZayavka(inputRadio) {
         list += "    <a href=\"javascript:void(0);\" onclick=\"addZayavka(this)\" class=\"waves-effect col s12 waves-light green darken-3 btn\"><i class=\"material-icons white-text\">add<\/i><\/a>";
         list += "";
         list += "<\/div>";
+        list += "<div class=\"row\">";
+        list += "                <div class=\"input-field col s12\">";
+        list += "                    <input id=\"nazva_subj\" type=\"text\" class=\"validate\">";
+        list += "                    <label for=\"nazva_subj\">Повна назва суб’єкта господарської діяльності <\/label>";
+        list += "                <\/div>";
+        list += "                <div class=\"input-field col s12\">";
+        list += "                    <input id=\"id_code_subj\" type=\"text\" class=\"validate\">";
+        list += "                    <label for=\"id_code_subj\">Ідентифікаційний код суб’єкта господарської діяльності (ЄДРПОУ)<\/label>";
+        list += "                <\/div>";
+        list += "                <div class=\"input-field col s12\">";
+        list += "                    <input id=\"has_inv_or_decl\" type=\"text\" class=\"validate\">";
+        list += "                    <label for=\"has_inv_or_decl\">Наявність інвойсу та митної декларації<\/label>";
+        list += "                <\/div>";
 
-
-
+        list += "<\/div>";
     }
 
 
