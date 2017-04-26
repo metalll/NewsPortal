@@ -202,7 +202,7 @@ function handleZayavka(inputRadio) {
         list += "                    <input id=\"has_inv_or_decl\" type=\"text\" class=\"validate\">";
         list += "                    <label for=\"has_inv_or_decl\">Наявність інвойсу та митної декларації<\/label>";
         list += "                <\/div>";
-
+        list += "    <a href=\"javascript:void(0);\" class=\"modal-action modal-close waves-effect col s12 waves-ligh btn\">Отправить заявку<\/a>";
         list += "<\/div>";
     }
 
