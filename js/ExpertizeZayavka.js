@@ -145,45 +145,51 @@ function handleZayavka(inputRadio) {
 
     if(inputRadio.id=='exp_zost_obl'||inputRadio.id=='exp_zost_post'||inputRadio.id=='exp_zost_vendor'){
 
+
+        list += "<div class=\"row\">";
+        list += "    <table class=\"col s12 m12 l12\" id = \"table\">";
+        list += "        <thead>";
+        list += "        <tr>";
+        list += "            <th>Найменування, тип, марка обладнання<\/th>";
+        list += "            <th>Кількість<\/th>";
+        list += "            <th>Країна-виробник<\/th>";
+        list += "            <th>Рік випуску<\/th>";
+        list += "            <th><\/th>";
+        list += "        <\/tr>";
+        list += "        <\/thead>";
+        list += "        <tbody>";
+        list += "        <tr>";
+        list += "            <td>";
+        list += "                <div class=\"input-field col s12\">";
+        list += "                    <input id=\"name\" type=\"text\" class=\"validate\">";
+        list += "                    <label for=\"name\">Найменування, тип, марка обладнання<\/label>";
+        list += "                <\/div>";
+        list += "            <\/td>";
+        list += "            <td>";
+        list += "                <div class=\"input-field col s12\">";
+        list += "                    <input id=\"elem_size\" type=\"number\" class=\"validate\">";
+        list += "                    <label for=\"elem_size\">Кількість<\/label>";
+        list += "                <\/div>";
+        list += "            <\/td>";
+        list += "            <td> <div class=\"input-field col s12\">";
+        list += "                <input id=\"country_vendor\" type=\"text\" class=\"validate\">";
+        list += "                <label for=\"country_vendor\">Країна-виробник<\/label>";
+        list += "            <\/div><\/td>";
+        list += "            <td> <div class=\"input-field col s12\">";
+        list += "                <input id=\"date_vendor\" type=\"text\" class=\"validate\">";
+        list += "                <label for=\"date_vendor\">Рік випуску<\/label>";
+        list += "            <\/div><\/td>";
+        list += "            <td> <a href=\"javascript:void(0);\" onclick=\"deleteZayavka(this)\" class=\"waves-effect col s12 waves-light red darken-3 btn\"><i class=\"material-icons white-text\">delete<\/i><\/a><\/td>";
+        list += "        <\/tr>";
         list += "";
-        list += "        <div class=\"row\">";
-        list += "        <table class=\"col s12 m12 l12\" id = \"table\">";
-        list += "            <thead>";
-        list += "            <tr>";
-        list += "                <th>Найменування, тип, марка обладнання<\/th>";
-        list += "                <th>Кількість<\/th>";
-        list += "                <th>Країна-виробник<\/th>";
-        list += "                <th>Рік випуску<\/th>";
-        list += "            <\/tr>";
-        list += "            <\/thead>";
-        list += "            <tbody>";
-        list += "            <tr>";
-        list += "                <td>";
-        list += "                    <div class=\"input-field col s12\">";
-        list += "                        <input id=\"name\" type=\"text\" class=\"validate\">";
-        list += "                        <label for=\"name\">Найменування, тип, марка обладнання<\/label>";
-        list += "                    <\/div>";
-        list += "                <\/td>";
-        list += "                <td>";
-        list += "                    <div class=\"input-field col s12\">";
-        list += "                        <input id=\"elem_size\" type=\"number\" class=\"validate\">";
-        list += "                        <label for=\"elem_size\">Кількість<\/label>";
-        list += "                    <\/div>";
-        list += "                <\/td>";
-        list += "                <td> <div class=\"input-field col s12\">";
-        list += "                    <input id=\"country_vendor\" type=\"text\" class=\"validate\">";
-        list += "                    <label for=\"country_vendor\">Країна-виробник<\/label>";
-        list += "                <\/div><\/td>";
-        list += "                <td> <div class=\"input-field col s12\">";
-        list += "                    <input id=\"date_vendor\" type=\"text\" class=\"validate\">";
-        list += "                    <label for=\"date_vendor\">Рік випуску<\/label>";
-        list += "                <\/div><\/td>";
+        list += "        <\/tbody>";
         list += "";
-        list += "            <\/tr>";
-        list += "           ";
-        list += "            <\/tbody>";
-        list += "        <\/table>";
-        list += "        <\/div>";
+        list += "    <\/table>";
+        list += "";
+        list += "    <a href=\"javascript:void(0);\" onclick=\"addZayavka(this)\" class=\"waves-effect col s12 waves-light green darken-3 btn\"><i class=\"material-icons white-text\">add<\/i><\/a>";
+        list += "";
+        list += "<\/div>";
+
 
 
     }
@@ -196,6 +202,60 @@ function handleZayavka(inputRadio) {
     //$('#zayavka_dialog').scrollTo('select');
 
 
+
+
+}
+
+
+function addZayavka(sender) {
+
+    var id = Math.round(Math.random()*1000);
+
+
+
+
+
+    console.log(id);
+
+
+    var table =  sender.parentNode.childNodes[1].childNodes[3];
+    var buffer = table.innerHTML;
+
+    buffer += "  <tr>";
+    buffer += "            <td>";
+    buffer += "                <div class=\"input-field col s12\">";
+    buffer += "                    <input id=\"name"+id+"\" type=\"text\" class=\"validate\">";
+    buffer += "                    <label for=\"name"+id+"\">Найменування, тип, марка обладнання<\/label>";
+    buffer += "                <\/div>";
+    buffer += "            <\/td>";
+    buffer += "            <td>";
+    buffer += "                <div class=\"input-field col s12\">";
+    buffer += "                    <input id=\"elem_size"+id+"\" type=\"number\" class=\"validate\">";
+    buffer += "                    <label for=\"elem_size"+id+"\">Кількість<\/label>";
+    buffer += "                <\/div>";
+    buffer += "            <\/td>";
+    buffer += "            <td> <div class=\"input-field col s12\">";
+    buffer += "                <input id=\"country_vendor"+id+"\" type=\"text\" class=\"validate\">";
+    buffer += "                <label for=\"country_vendor"+id+"\">Країна-виробник<\/label>";
+    buffer += "            <\/div><\/td>";
+    buffer += "            <td> <div class=\"input-field col s12\">";
+    buffer += "                <input id=\"date_vendor"+id+"\" type=\"text\" class=\"validate\">";
+    buffer += "                <label for=\"date_vendor"+id+"\">Рік випуску<\/label>";
+    buffer += "            <\/div><\/td>";
+    buffer += "            <td> <a href=\"javascript:void(0);\" onclick=\"deleteZayavka(this)\" class=\"waves-effect col s12 waves-light red darken-3 btn\"><i class=\"material-icons white-text\">delete<\/i><\/a><\/td>";
+    buffer += "        <\/tr>";
+
+    table.innerHTML = buffer;
+
+}
+
+function deleteZayavka(sender){
+    //console.log(sender.parentNode.parentNode);
+
+    var removedTR = sender.parentNode.parentNode;
+    var table = removedTR.parentNode;
+
+    table.removeChild(removedTR);
 
 
 }
