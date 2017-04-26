@@ -215,11 +215,11 @@ function addZayavka(sender) {
 
 
 
-    console.log(id);
+  //  console.log(id);
 
 
     var table =  sender.parentNode.childNodes[1].childNodes[3];
-    var buffer = table.innerHTML;
+    var buffer = "";
 
     buffer += "  <tr>";
     buffer += "            <td>";
@@ -245,7 +245,7 @@ function addZayavka(sender) {
     buffer += "            <td> <a href=\"javascript:void(0);\" onclick=\"deleteZayavka(this)\" class=\"waves-effect col s12 waves-light red darken-3 btn\"><i class=\"material-icons white-text\">delete<\/i><\/a><\/td>";
     buffer += "        <\/tr>";
 
-    table.innerHTML = buffer;
+    $('#table').append(buffer);
 
 }
 
