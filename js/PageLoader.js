@@ -99,30 +99,12 @@ function PageLoader(url,relative) {
             }
 
             if(document.getElementsByClassName('carousel')!=null&&document.getElementsByClassName('carousel.carousel-slider')){
-                $('.carousel').carousel(
-                    {   duration:100,
-                        dist:-60,
-                        padding:10,
-                        indicators:true,
-                        shift:100,
-
-                    }
-
-                );
-
-
                 $('.carousel.carousel-slider').carousel({fullWidth: true});
-               // autoplay();
-               //  function autoplay() {
-               //      if(!caruselBoolFlag){
-               //          $('.carousel').carousel('next');
-               //      }else {
-               //
-               //          caruselBoolFlag = false;
-               //      }
-               //      setTimeout(autoplay, 5500);
-               //  }
-               //
+                // $('.button-collapse').sideNav();
+                setInterval(function() {
+                    $('.carousel').carousel('next');
+                }, 5000);
+
 
             }
 

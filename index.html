@@ -744,19 +744,13 @@
 
         );
 
-
         $('.carousel.carousel-slider').carousel({fullWidth: true});
+        // $('.button-collapse').sideNav();
+        setInterval(function() {
+            $('.carousel').carousel('next');
+        }, 5000);
 
-        if(!caruselBoolFlag){return;}
-        autoplay();
-        function autoplay() {
-            if(!caruselBoolFlag){
-                $('.carousel').carousel('next');
-            }else {
-                caruselBoolFlag = false;
-            }
-            setTimeout(autoplay, 5500);
-        }
+
 
 
 
