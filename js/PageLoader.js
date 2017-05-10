@@ -71,9 +71,7 @@ function PageLoader(url,relative) {
             navigationStack.push(navigationItem);
 
             document.getElementById('page_content').innerHTML= html;
-            if(url.indexOf('index_content')){
-                index_content();
-            }
+
             if(document.getElementsByClassName('collapsible')!=null){
                 console.log( document.getElementsByClassName('collapsible'));
                 $('.collapsible').collapsible();
