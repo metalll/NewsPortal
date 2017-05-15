@@ -77,6 +77,10 @@ function PageLoader(url,relative) {
                 $('.collapsible').collapsible();
             }
 
+            if(document.getElementById('service-container')!=null){
+
+            }
+
             if(document.getElementsByClassName('modal')!=null){
 
                 $('.modal').modal({
