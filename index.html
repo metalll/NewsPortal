@@ -497,9 +497,14 @@
             success: function (data) {
                 var stemp = JSON.parse(data).values;
                 for(var i=0;i<stemp.length;i++){
-                    autocompleteData.push(new Option(stemp[i].headerText,null));
+                    var key = stemp[i].headerText;
+                    var obj = {};
+                    obj[key]=null;
+                    autocompleteData.push(key);
                 }
 
+
+                console.log(autocompleteData);
                 $('input.autocomplete').autocomplete({
                     data: autocompleteData,
                     limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
