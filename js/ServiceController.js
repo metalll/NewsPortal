@@ -28,7 +28,7 @@ function sevicesJson() {
         type: "GET",
 
         success: function (data) {
-            loadedServiceElements = JSON.parse(data).values;
+            loadedServiceElements = JSON.parse(data);
             console.log("Serives JSON :" + loadedServiceElements);
             console.log(loadedServiceElements);
             serviceParsing();
