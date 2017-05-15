@@ -2,7 +2,7 @@
  * Created by NSD on 15.05.17.
  */
 
-var loadedServiceElements = [];
+var loadedServiceElements = new Object();
 
 function loadServices() {
     console.log('start to load');
