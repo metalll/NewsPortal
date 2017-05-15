@@ -46,14 +46,17 @@ function serviceParsing() {
     var serviceHtml = "";
 
     serviceHtml += '<div class=\"row\">';
-    var fixLayout = false;
-    if(loadedServiceElements.length%3!=0){
-        fixLayout =true;
-    }
+
+
 
     for(var i=0;i<loadedServiceElements.length;i++){
        var j =  loadedServiceElements.length-i-1;
         console.log("elements:" + (i+1) + " other:" + j);
+
+        var elC = i+1;
+
+
+
 
 
         serviceHtml += "   <div class=\"row col s12 m12 l4\">";
@@ -76,7 +79,15 @@ function serviceParsing() {
 
 
 
-
+        if(elC%3==0&&j<=3){
+            if(j==3){}
+            if(j==2){
+                serviceHtml += "<div class=\"col l2\"><\/div>";
+            }
+            if(j==1){
+                serviceHtml += "<div class=\"col l4\"><\/div>";
+            }
+        }
 
     }
 
