@@ -53,7 +53,7 @@ function serviceParsing() {
 
     for(var i=0;i<loadedServiceElements.length;i++){
        var j =  loadedServiceElements.length-i
-        console.log("elements:" + i + " other:" + j);
+        console.log("elements:" + (i+1) + " other:" + j);
 
 
         serviceHtml += "   <div class=\"row col s12 m12 l4\">";
