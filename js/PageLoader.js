@@ -78,6 +78,9 @@ function PageLoader(url,relative) {
             }
 
             if(document.getElementById('service-container')!=null){
+
+                console.log('loading services....');
+
                 loadServices();
             }
 

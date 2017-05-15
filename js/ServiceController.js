@@ -5,7 +5,7 @@
 var loadedServiceElements = [];
 
 function loadServices() {
-
+    console.log('start to load');
    sevicesJson();
 
 }
@@ -16,14 +16,17 @@ function sevicesJson() {
     hrefLoading += window.location.protocol+"";
     hrefLoading += "//pbezpeka.herokuapp.com/API/Service";
 
+    console.log('url to load:' + hrefLoading);
 
 
     $.ajax({
         url: hrefLoading,
         type: "GET",
-
         success: function (data) {
             loadedServiceElements = JSON.parse(data);
+
+
+
             console.log("Serives JSON :" + loadedServiceElements);
             console.log(loadedServiceElements);
             serviceParsing();
