@@ -30,6 +30,7 @@ function sevicesJson() {
     $.ajax({
         url: hrefLoading,
         type: "GET",
+        cache:true,
         success: function (data) {
             loadedServiceElements = JSON.parse(data).values;
 
