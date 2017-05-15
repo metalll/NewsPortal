@@ -2,13 +2,21 @@
  * Created by NSD on 15.05.17.
  */
 
-var loadedServiceElements = new Object();
+var loadedServiceElements = null;
 
 function loadServices() {
     console.log('start to load');
-   sevicesJson();
-
+    if(loadedServiceElements==null){
+        sevicesJson();
+    }else {
+        serviceParsing();
+    }
 }
+
+function getLoadedService() {
+    return loadedServiceElements;
+}
+
 
 
 function sevicesJson() {

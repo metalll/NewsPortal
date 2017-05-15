@@ -474,6 +474,9 @@
 
         loadServices();
 
+
+
+
         $('.collapsible').collapsible();
         $(".button-collapse").sideNav();
 
@@ -491,11 +494,7 @@
         console.log('url to load:' + hrefLoading);
 
 
-        $.ajax({
-            url: hrefLoading,
-            type: "GET",
-            success: function (data) {
-                var stemp = JSON.parse(data).values;
+        var stemp = getLoadedService();
                 for(var i=0;i<stemp.length;i++){
                     autocompleteData.push(new Option(stemp[i].headerText,null));
                 }
@@ -512,9 +511,7 @@
                     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
                 });
 
-            }
 
-        });
 
 
 

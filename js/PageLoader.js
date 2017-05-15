@@ -116,6 +116,8 @@ function PageLoader(url,relative) {
                 );
 
 
+
+
                 $('.carousel.carousel-slider').carousel({fullWidth: true});
                // autoplay();
                //  function autoplay() {
@@ -145,14 +147,9 @@ function PageLoader(url,relative) {
 function goBack() {
     var navItem = navigationStack.pop();
     if (navItem!=null) {
-
-
         PageLoader(navItem.url,navItem.relative);
-
         //load content with ajax
     }
-
-
 };
 
 
