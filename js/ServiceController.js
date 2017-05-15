@@ -82,7 +82,7 @@ function serviceParsing() {
 
 
 
-    serviceHtml += '<\/div>'
+    serviceHtml += '<\/div>';
 
 
     console.log(serviceHtml);
