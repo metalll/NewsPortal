@@ -82,6 +82,7 @@ function serviceParsing() {
     serviceHtml += '<\/div>'
 
 
+    console.log(serviceHtml);
 
     seviceContainer.innerHTML = serviceHtml;
 
