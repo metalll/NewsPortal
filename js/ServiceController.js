@@ -23,7 +23,7 @@ function sevicesJson() {
         url: hrefLoading,
         type: "GET",
         success: function (data) {
-            loadedServiceElements = JSON.parse(data);
+            loadedServiceElements = JSON.parse(data).values;
 
 
 
