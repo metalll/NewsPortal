@@ -80,7 +80,7 @@ function serviceParsing() {
 
 
         if(elC%3==0&&j<=3){
-            if(j==3){}
+            if(j==3){  }
             if(j==2){
                 serviceHtml += "<div class=\"col l2\"><\/div>";
             }
