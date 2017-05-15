@@ -481,18 +481,46 @@
             $('select').material_select();
         });
 
-        $('input.autocomplete').autocomplete({
-            data: {
-                "Аутсорсинг": null,
-                "Пожарная сигнализация": null,
-                "О компании": 'http://placehold.it/250x250'
-            },
-            limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
-            onAutocomplete: function(val) {
-                // Callback function when value is autcompleted.
-            },
-            minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+
+        var autocompleteData = {};
+
+        var hrefLoading = "";
+        hrefLoading += window.location.protocol+"";
+        hrefLoading += "//pbezpeka.herokuapp.com/API/Service";
+
+        console.log('url to load:' + hrefLoading);
+
+
+        $.ajax({
+            url: hrefLoading,
+            type: "GET",
+            success: function (data) {
+                var temp = JSON.parse(data).values;
+
+                for(var i=0;i<temp.length;i++){
+                    autocompleteData.push({key:temp[i].headerText,value:null});
+                }
+
+
+                $('input.autocomplete').autocomplete({
+                    data: autocompleteData,
+                    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+                    onAutocomplete: function(val) {
+                        // Callback function when value is autcompleted.
+                    },
+                    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+                });
+
+
+            }
+
         });
+
+
+
+
+
+
 
         $('.carousel').carousel(
             {   duration:100,
