@@ -78,7 +78,7 @@ function PageLoader(url,relative) {
             }
 
             if(document.getElementById('service-container')!=null){
-
+                loadServices();
             }
 
             if(document.getElementsByClassName('modal')!=null){
