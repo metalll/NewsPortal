@@ -6,12 +6,7 @@ var loadedServiceElements = [];
 
 function loadServices() {
 
-    if(loadedServiceElements.size<=0){
-      sevicesJson();
-    }
-    else{
-        serviceParsing();
-    }
+   sevicesJson();
 
 }
 
