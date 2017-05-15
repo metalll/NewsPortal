@@ -52,7 +52,7 @@ function serviceParsing() {
     }
 
     for(var i=0;i<loadedServiceElements.length;i++){
-       var j =  loadedServiceElements.length-i
+       var j =  loadedServiceElements.length-i-1;
         console.log("elements:" + (i+1) + " other:" + j);
 
 
