@@ -47,11 +47,11 @@ function serviceParsing() {
 
     serviceHtml += '<div class=\"row\">';
     var fixLayout = false;
-    if(loadedServiceElements.size%3!=0){
+    if(loadedServiceElements.length%3!=0){
         fixLayout =true;
     }
 
-    for(var i=0;i<loadedServiceElements.size;i++){
+    for(var i=0;i<loadedServiceElements.length;i++){
 
 
         serviceHtml += "   <div class=\"row col s12 m12 l4\">";
