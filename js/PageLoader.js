@@ -77,7 +77,7 @@ function PageLoader(url,relative) {
                 $('.collapsible').collapsible();
             }
 
-            if(document.getElementById('service-container')!=null){
+            if(finalUrl.indexOf("services")!=-1){
 
                 console.log('loading services....');
 
