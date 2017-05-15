@@ -495,7 +495,7 @@
             url: hrefLoading,
             type: "GET",
             success: function (data) {
-                var stemp = JSON.stringify(data).values;
+                var stemp = JSON.parse(data).values;
                 for(var i=0;i<stemp.length;i++){
                     autocompleteData.push(new Option(stemp[i].headerText,null));
                 }
