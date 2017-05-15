@@ -495,12 +495,10 @@
             url: hrefLoading,
             type: "GET",
             success: function (data) {
-                var temp = JSON.parse(data).values;
-
-                for(var i=0;i<temp.length;i++){
-                    autocompleteData.push({temp[i].headerText : null });
+                var stemp = JSON.stringify(data).values;
+                for(var i=0;i<stemp.length;i++){
+                    autocompleteData.push(new Option(stemp[i].headerText,null));
                 }
-
 
                 $('input.autocomplete').autocomplete({
                     data: autocompleteData,
@@ -511,10 +509,11 @@
                     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
                 });
 
-
             }
 
         });
+
+
 
 
 
