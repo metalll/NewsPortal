@@ -59,7 +59,7 @@ window.onload=function () {
         preloader += "        <img id=\"preloader\" src=\"images\/bx_loader.gif\">";
         preloader += "   <\/div> <\/div>";
 
-        $('#search_result_div').innerHTML =preloader;
+        $('#search_result').innerHTML =preloader;
 
 
         var searchComponentUrl = "";
@@ -81,7 +81,7 @@ window.onload=function () {
 
                     console.log(jsonD);
 
-                    $('#search_result_div').innerHTML="hi";
+                    $('#search_result').innerHTML="hi";
 
 
 
