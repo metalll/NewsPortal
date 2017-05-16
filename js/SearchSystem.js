@@ -109,8 +109,10 @@ function parseQueryServices(data) {
 
 
     var serviceHtml = "";
-
+    serviceHtml +=" <h4 class=\"black-text center center-align\">Что удалось найти<\/h4>";
     serviceHtml += '<div class=\"row\">';
+
+
 
 
 
@@ -144,15 +146,15 @@ function parseQueryServices(data) {
 
 
 
-        if(elC%3==0&&j<=3){
-            if(j==3){  }
-            if(j==2){
-                serviceHtml += "<div class=\"col l2\"><\/div>";
-            }
-            if(j==1){
-                serviceHtml += "<div class=\"col l4\"><\/div>";
-            }
-        }
+        // if(elC%3==0&&j<=3){
+        //     if(j==3){  }
+        //     if(j==2){
+        //         serviceHtml += "<div class=\"col l2\"><\/div>";
+        //     }
+        //     if(j==1){
+        //         serviceHtml += "<div class=\"col l4\"><\/div>";
+        //     }
+        // }
 
     }
 
