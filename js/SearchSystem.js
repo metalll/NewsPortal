@@ -176,7 +176,7 @@ function parseQueryServicesMobile(dataQueryServiceMobile) {
 
 
 
-    for(var i=0;i<dataQueryService.length;i++){
+    for(var i=0;i<dataQueryServiceMobile.length;i++){
 
         serviceHtml += "   <div class=\"row col s12 m12 l4\">";
         serviceHtml += "                <div class=\"col s12 m12 l12\">";
