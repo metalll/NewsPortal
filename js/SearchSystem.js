@@ -52,14 +52,9 @@ window.onload=function () {
 
 
     function handleSearch(inputText) {
-        var preloader="<div class=\"row\">";
-        preloader += "   <div id=\"preloader_div\" class=\" col s12 m12 l12 center center-align\">";
-        preloader += "";
-        preloader += "";
-        preloader += "        <img id=\"preloader\" src=\"images\/bx_loader.gif\">";
-        preloader += "   <\/div> <\/div>";
 
-        $('#search_result').innerHTML =preloader;
+
+
 
 
         var searchComponentUrl = "";
