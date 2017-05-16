@@ -62,6 +62,17 @@ function PageLoader(url,relative) {
         success: function(html){
 
 
+            if(document.getElementById('autocomplete-input').value != ""|| document.getElementById('autocomplete-input').value != null){
+                document.getElementById('autocomplete-input').value = "";
+
+                if($('#page_content').hasClass('hide')){
+
+                $('#search_result').addClass('hide');
+                $('#page_content').removeClass('hide');
+                }
+
+            }
+
 
 
 
