@@ -76,7 +76,7 @@ window.onload=function () {
 
                     console.log(jsonD);
 
-                    $('#search_result').innerHTML="hi";
+                    document.getElementById('search_result').innerHTML="hi";
 
 
 
