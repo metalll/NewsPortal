@@ -79,6 +79,7 @@ window.onload=function () {
                     jsonD = JSON.parse(data);
 
 
+                    console.log(jsonD);
 
 
 
