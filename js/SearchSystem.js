@@ -81,7 +81,7 @@ window.onload=function () {
 
                     console.log(jsonD);
 
-                    $('#search_result_div').innerHTML="";
+                    $('#search_result_div').innerHTML="hi";
 
 
 
