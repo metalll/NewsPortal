@@ -53,13 +53,13 @@ window.onload=function () {
 
     function handleSearch(inputText) {
         var preloader="<div class=\"row\">";
-        preloader += "   <div id=\"global_preloader_div\" class=\" col s12 m12 l12 center center-align\">";
+        preloader += "   <div id=\"preloader_div\" class=\" col s12 m12 l12 center center-align\">";
         preloader += "";
         preloader += "";
-        preloader += "        <img id=\"global_preloader\" src=\"images\/bx_loader.gif\">";
+        preloader += "        <img id=\"preloader\" src=\"images\/bx_loader.gif\">";
         preloader += "   <\/div> <\/div>";
 
-        $('#search_result').innerHTML =preloader;
+        $('#search_result_div').innerHTML =preloader;
 
 
         var searchComponentUrl = "";
@@ -81,7 +81,7 @@ window.onload=function () {
 
                     console.log(jsonD);
 
-
+                    $('#search_result_div').innerHTML="";
 
 
 
