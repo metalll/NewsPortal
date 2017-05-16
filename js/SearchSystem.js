@@ -38,14 +38,62 @@ window.onload=function () {
 
             $('#search_result').addClass('hide');
             $('#page_content').removeClass('hide');
+
             return false;
 
         } else {
             $('#search_result').removeClass('hide');
             $('#page_content').addClass('hide');
+
+        }
+        handleSearch(text);
+
+    });
+
+
+    function handleSearch(inputText) {
+        var preloader="<div class=\"row\">";
+        preloader += "   <div id=\"global_preloader_div\" class=\" col s12 m12 l12 center center-align\">";
+        preloader += "";
+        preloader += "";
+        preloader += "        <img id=\"global_preloader\" src=\"images\/bx_loader.gif\">";
+        preloader += "   <\/div> <\/div>";
+
+        $('#search_result').innerHTML =preloader;
+
+
+        var searchComponentUrl = "";
+
+        searchComponentUrl+=window.location.protocol+'';
+        searchComponentUrl+="//pbezpeka.herokuapp.com/API/Search?q=";
+        searchComponentUrl+=inputText;
+
+
+        if (inputText == '' || inputText == null){
+            return;
+        }else{
+            $.ajax({
+                url:searchComponentUrl,
+                type: "GET",
+                success:function (data) {
+                    jsonD = JSON.parse(data);
+
+
+
+
+
+
+
+                }
+
+            });
+
+
+
         }
 
 
-    });
+    }
+
 };
 
