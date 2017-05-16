@@ -104,7 +104,7 @@ window.onload=function () {
 
 };
 
-function parseQueryServices(data) {
+function parseQueryServices(dataQueryService) {
     var seviceContainer = document.getElementById('search_result_div');
 
 
@@ -116,12 +116,7 @@ function parseQueryServices(data) {
 
 
 
-    for(var i=0;i<data.length;i++){
-        var j =  data.length-i-1;
-        console.log("elements:" + (i+1) + " other:" + j);
-
-        var elC = i+1;
-
+    for(var i=0;i<dataQueryService.length;i++){
 
 
 
@@ -130,19 +125,21 @@ function parseQueryServices(data) {
         serviceHtml += "                <div class=\"col s12 m12 l12\">";
         serviceHtml += "                    <div class=\"hoverable medium card\">";
         serviceHtml += "                        <div class=\"card-image\">";
-        serviceHtml += "                            <img class=\"center center-align\" style = \" object-fit: cover;  height:200px;\"  src=\""+loadedServiceElements[i].image+"\">";
-        serviceHtml += "                            <span class=\"card-title center backgr-col center-align \" style=\"font-size: 125%\">"+loadedServiceElements[i].headerText+"<\/span>";
+        serviceHtml += "                            <img class=\"center center-align\" style = \" object-fit: cover;  height:200px;\"  src=\""+dataQueryService[i].image+"\">";
+        serviceHtml += "                            <span class=\"card-title center backgr-col center-align \" style=\"font-size: 125%\">"+dataQueryService.headerText+"<\/span>";
         serviceHtml += "                        <\/div>";
         serviceHtml += "                        <div class=\"card-content\">";
-        serviceHtml += "                            <p>"+loadedServiceElements[i].minimalDescription+"<\/p>";
+        serviceHtml += "                            <p>"+dataQueryService[i].minimalDescription+"<\/p>";
         serviceHtml += "";
         serviceHtml += "                        <\/div>";
         serviceHtml += "                        <div class=\"card-action center-align \">";
-        serviceHtml += "                            <p> <a href=\"javascript:void(0);\" onclick=\""+loadedServiceElements[i].content+"\" class=\"waves-effect col s12 waves-light blue darken-4 btn\">Подробнее<\/a>  <\/p>";
+        serviceHtml += "                            <p> <a href=\"javascript:void(0);\" onclick=\""+dataQueryService[i].content+"\" class=\"waves-effect col s12 waves-light blue darken-4 btn\">Подробнее<\/a>  <\/p>";
         serviceHtml += "                        <\/div>";
         serviceHtml += "                    <\/div>";
         serviceHtml += "                <\/div>";
         serviceHtml += "            <\/div>";
+
+
 
 
 
