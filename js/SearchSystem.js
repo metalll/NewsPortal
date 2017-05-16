@@ -45,6 +45,14 @@ window.onload=function () {
             $('#mob_contacts').addClass('hide');
 
             var inputText = text;
+
+
+            var searchComponentUrl = "";
+
+            searchComponentUrl+=window.location.protocol+'';
+            searchComponentUrl+="//pbezpeka.herokuapp.com/API/Search?q=";
+            searchComponentUrl+=inputText;
+
             if (inputText == '' || inputText == null){
                 return;
             }else{
