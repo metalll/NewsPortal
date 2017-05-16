@@ -73,6 +73,22 @@ function PageLoader(url,relative) {
 
             }
 
+            if(document.getElementById('autocomplete-input_mobile').value != ""|| document.getElementById('autocomplete-input_mobile').value != null){
+                document.getElementById('autocomplete-input_mobile').value = "";
+
+                if($('#mob_company').hasClass('hide')){
+                    $('#search_result_mobile').addClass('hide');
+                    $('#mob_company').removeClass('hide');
+                    $('#mob_services').removeClass('hide');
+                    $('#mob_news').removeClass('hide');
+                    $('#mob_career').removeClass('hide');
+                    $('#mob_contacts').removeClass('hide');
+
+
+
+                }
+                $('.button-collapse').sideNav('hide');
+            }
 
 
 
