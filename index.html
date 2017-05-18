@@ -84,7 +84,7 @@
                     <div class="input-field">
                         <input id="autocomplete-input" type="search" required>
                         <label class="label-icon" for="autocomplete-input"><i class="material-icons">search</i></label>
-                        <i class="material-icons" onclick="clear();">close</i>
+                        <i class="material-icons" id = "close_search">close</i>
                     </div>
                 </form>
             </div>
@@ -546,6 +546,9 @@
     });
 
 
+$('#close_search').click(function () {
+    clear();
+})
 
     $('#company,#mob_company').click(function () {
 
@@ -579,7 +582,12 @@
 
     function clear() {
         console.log('tap clear');
-        document.getElementById('autocomplete-input').input();
+        document.getElementById('autocomplete-input').value='';
+        if(      $('#page_content').hasClass('hide')){
+            $('#search_result').addClass('hide');
+            $('#page_content').removeClass('hide');
+        }
+
     }
 
 
