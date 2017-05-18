@@ -142,9 +142,6 @@ function PageLoader(url,relative) {
 
                 );
 
-
-
-
                 $('.carousel.carousel-slider').carousel({fullWidth: true});
                // autoplay();
                //  function autoplay() {

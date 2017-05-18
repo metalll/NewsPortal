@@ -96,7 +96,7 @@ window.onload=function () {
 
             $('#search_result').addClass('hide');
             $('#page_content').removeClass('hide');
-
+            $('.carousel').carousel('next');
             return false;
 
         } else {
