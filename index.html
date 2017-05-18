@@ -84,7 +84,7 @@
                     <div class="input-field">
                         <input id="autocomplete-input" type="search" required>
                         <label class="label-icon" for="autocomplete-input"><i class="material-icons">search</i></label>
-                        <i class="material-icons">close</i>
+                        <i class="material-icons" onclick="clear();">close</i>
                     </div>
                 </form>
             </div>
@@ -577,6 +577,10 @@
 
     });
 
+    function clear() {
+        document.getElementById('autocomplete-input').value = '';
+        document.getElementById('autocomplete-input').input();
+    }
 
 
 
