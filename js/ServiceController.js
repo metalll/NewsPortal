@@ -87,10 +87,10 @@ function serviceParsing() {
         // serviceHtml += "            <\/div>";
 
 
-        serviceHtml += "   <div class=\"row col s12 m12 l4\">";
+        serviceHtml += "   <div class=\"row col s12 m12 l4\"  href=\"javascript:void(0);\" onclick=\"loadedServiceElements[i].content\" >";
         serviceHtml += "    <div class=\"col s12 m12 l12\">";
         serviceHtml += "";
-        serviceHtml += "                <div class=\"hoverable medium card\" href=\"javascript:void(0);\" onclick=\"loadedServiceElements[i].content\" >";
+        serviceHtml += "                <div class=\"hoverable medium card\">";
         serviceHtml += "                    <div class=\"card-image\">";
         serviceHtml += "                        <img class=\"center center-align\" style=\" object-fit: cover;  height:200px;\" src=\""+loadedServiceElements[i].image+"\">";
         serviceHtml += "                        <span class=\"card-title center backgr-col center-align \" style=\"font-size: 125%\">"+loadedServiceElements[i].headerText+"<\/span>";
