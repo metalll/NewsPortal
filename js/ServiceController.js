@@ -52,6 +52,9 @@ function serviceParsing() {
     var seviceContainer = document.getElementById('service-container');
 
 
+
+
+
     var serviceHtml = "";
 
     serviceHtml += '<div class=\"row\">';
