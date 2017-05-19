@@ -136,18 +136,8 @@ window.onload=function () {
                 success:function (data) {
                     jsonD = JSON.parse(data);
 
-
                     console.log(jsonD);
                     parseQueryServices(jsonD);
-
-
-
-
-                   // document.getElementById('search_result_div').innerHTML="";
-
-
-
-
 
                 }
 
