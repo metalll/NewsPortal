@@ -111,6 +111,13 @@ function PageLoader(url,relative) {
                 loadServices();
             }
 
+            if(finalUrl.indexOf("news")!== -1||finalUrl.indexOf("index")!== -1){
+
+                console.log('loading news....');
+
+                loadNews();
+            }
+
             if(document.getElementsByClassName('modal')!=null){
 
                 $('.modal').modal({
@@ -141,6 +148,8 @@ function PageLoader(url,relative) {
                     }
 
                 );
+
+
 
                 $('.carousel.carousel-slider').carousel({fullWidth: true});
                // autoplay();
