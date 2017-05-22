@@ -166,6 +166,7 @@ function parseQueryServicesMobile(dataQueryServiceMobile) {
 
 
 
+
     for(var i=0;i<dataQueryServiceMobile.length;i++){
 
         serviceHtml += "   <div class=\"row col s12 m12 l4\">";
@@ -218,6 +219,10 @@ function parseQueryServicesMobile(dataQueryServiceMobile) {
 
 function parseQueryServices(dataQueryService) {
     var seviceContainer = document.getElementById('search_result_div');
+
+    var searchInNews = false;
+    if(newsLoadedData!=null){searchInNews=true;}
+
 
 
     var serviceHtml = "";
@@ -281,15 +286,115 @@ function parseQueryServices(dataQueryService) {
         // }
 
     }
-
-
-
-
-
-
-
-
     serviceHtml += '<\/div>';
+
+    if(searchInNews){
+
+        serviceHtml += "<div class=\"row\">";
+        serviceHtml += "        <ul class=\"collection\">";
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if(dd<10) {
+            dd='0'+dd
+        }
+
+        if(mm<10) {
+            mm='0'+mm
+        }
+
+        var fullMouth = "";
+
+        switch (mm){
+            case '01':
+                fullMouth = 'января';
+                break;
+            case '02':
+                fullMouth = 'ферваля';
+                break;
+            case '03':
+                fullMouth = 'марта';
+                break;
+            case '04':
+                fullMouth = 'апреля';
+                break;
+            case '05':
+                fullMouth = 'мая';
+                break;
+            case '06':
+                fullMouth = 'июня';
+                break;
+            case '07':
+                fullMouth = 'июля';
+                break;
+            case '08':
+                fullMouth = 'августа';
+                break;
+            case '09':
+                fullMouth = 'сентября';
+                break;
+            case '10':
+                fullMouth = 'октября';
+                break;
+            case '11':
+                fullMouth = 'ноября';
+                break;
+            case '12':
+                fullMouth = 'декабря';
+                break;
+
+
+
+
+        }
+
+
+
+//    + " "+fullMouth+ " " + yyyy + " года";
+
+        today = dd;
+        today += " ";
+        today += fullMouth;
+        today += " ";
+        today += yyyy;
+        today += " года";
+
+
+
+
+
+
+
+        var queryString = document.getElementById('autocomplete-input').value;
+
+        for (var j=0;j<newsLoadedData.length;j++){
+
+            if(newsLoadedData.indexOf(queryString)!==-1||newsLoadedData.indexOf(queryString)!==-1){
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+    }
 
 
     console.log(serviceHtml);

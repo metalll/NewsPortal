@@ -30,7 +30,7 @@ function downloadNews() {
     $.ajax({
         url: 'https://ejournal.tool.vmcl.ru/service/popularArticles/?pressId=372&bitrixId=0',
         type: "GET",
-        cache:true,
+
         success: function (data) {
             console.log(data);
             newsLoadedData = {};
