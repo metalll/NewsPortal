@@ -541,7 +541,15 @@ $('#close_search').click(function () {
         }
 
     }
+    window.onbeforeunload = function(e) {
 
+       var loaded = getUrlParameter('page');
+
+       if(loaded!=null&&loaded!=undefined){
+           Back(loaded);
+       }
+
+    };
 
 
 
