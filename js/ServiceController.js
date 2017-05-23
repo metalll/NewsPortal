@@ -49,9 +49,19 @@ function sevicesJson() {
 
 function serviceParsing() {
 
-    var seviceContainer = document.getElementById('service-container');
+    var seviceContainer = null;
 
 
+    try{
+
+        seviceContainer = document.getElementById('service-container');
+    }catch (e){
+
+        seviceContainer = null;
+
+    }
+
+    if(seviceContainer==null) return;
 
 
 

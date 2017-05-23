@@ -57,7 +57,17 @@ function parseNews() {
     console.log("temp val");
     console.log(tempVal);
 
-    var newsContainer = document.getElementById('news_container');
+
+
+    var newsContainer = null;
+
+    try{
+        newsContainer =  document.getElementById('news_container');
+    }catch (e){
+        newsContainer = null;
+    }
+
+    if(newsContainer==null)return;
 
     var newsView="";
 
