@@ -393,6 +393,8 @@ function goBack() {
 
 $(window).on('hashchange', function() {
 
+
+
     if(isBack){
 
         var backURL = getUrlParameter('page');
@@ -413,8 +415,9 @@ $(window).on('hashchange', function() {
 
 window.addEventListener('popstate', function (e) {
 
-    isBack = true;
 
+    window.location.reload();
+    isBack = true;
         goBack();
 
 });
