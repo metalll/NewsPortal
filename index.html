@@ -541,7 +541,7 @@ $('#close_search').click(function () {
         }
 
     }
-    window.onbeforeunload = function(e) {
+    $(window.location.href).on('change', function(){
 
        var loaded = getUrlParameter('page');
 
