@@ -208,7 +208,7 @@ function goBack() {
 
 window.addEventListener('popstate', function (e) {
     var state = e.state;
-
+    if(state!=null){
         goBack();
-
+    }
 });
