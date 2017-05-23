@@ -247,6 +247,7 @@ function Back(url,relative) {
 
 
 
+console.log("loading back");
 
 
 
