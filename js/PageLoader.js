@@ -5,6 +5,14 @@
 
 var navigationStack = [];
 
+function setLocation(curLoc){
+    try {
+        history.pushState("no null state", "НИУККЦПБ", curLoc);
+        return;
+    } catch(e) {}
+    location.hash = '#' + curLoc;
+}
+
 function PageLoader(url,relative) {
 
 

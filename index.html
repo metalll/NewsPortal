@@ -334,13 +334,7 @@
 
 <script>
 
-    function setLocation(curLoc){
-        try {
-            history.pushState("no null state", null, curLoc);
-            return;
-        } catch(e) {}
-        location.hash = '#' + curLoc;
-    }
+
 
     var caruselBoolFlag = true;
 
@@ -363,30 +357,6 @@
 
 
 
-
-    var pageParam = getUrlParameter('page');
-
-
-    if(pageParam==null||pageParam===undefined||pageParam===false){
-
-
-//        console.log(pageParam);
-//        pageParam = 'index';
-//
-//        var tempPosition = window.location.href;
-//        if(tempPosition.indexOf('?')!==-1) {
-//            tempPosition += '&page=index.html';
-//        }
-//        else{
-//            tempPosition += '?page=index.html';
-//        }
-//        setLocation(tempPosition);
-
-
-
-    }else{
-        Back(pageParam,true);
-    }
 
 
 
@@ -423,6 +393,34 @@
         $(document).ready(function() {
             $('select').material_select();
         });
+
+
+
+
+
+        var pageParam = getUrlParameter('page');
+
+
+        if(pageParam==null||pageParam===undefined||pageParam===false){
+
+
+//        console.log(pageParam);
+//        pageParam = 'index';
+//
+//        var tempPosition = window.location.href;
+//        if(tempPosition.indexOf('?')!==-1) {
+//            tempPosition += '&page=index.html';
+//        }
+//        else{
+//            tempPosition += '?page=index.html';
+//        }
+//        setLocation(tempPosition);
+
+
+
+        }else{
+            Back(pageParam,true);
+        }
 
 
         var autocompleteData = [];
@@ -541,16 +539,9 @@ $('#close_search').click(function () {
         }
 
     }
-    $(window.location.href).on('change', function(){
 
-       var loaded = getUrlParameter('page');
-       console.log("loaded");
-       console.log(loaded);
-       if(loaded!=null&&loaded!=undefined){
-           Back(loaded);
-       }
 
-    });
+
 
 
 
