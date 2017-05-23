@@ -410,7 +410,10 @@ $(window).on('hashchange', function() {
 });
 
 window.addEventListener('popstate', function (e) {
+
+    isBack = true;
     if(navigationStack.length>=1){
+
         goBack();
     }
 });
