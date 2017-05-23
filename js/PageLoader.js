@@ -5,6 +5,8 @@
 
 var navigationStack = [];
 
+var isBack=false;
+
 function setLocation(curLoc){
     try {
         history.pushState("no null state", "НИУККЦПБ", curLoc);
@@ -16,7 +18,7 @@ function setLocation(curLoc){
 function PageLoader(url,relative) {
 
 
-
+    isBack = false;
     if(navigationStack==[]||navigationStack.size==0||navigationStack==null){
 
         var navigationItem = new Object();
@@ -377,16 +379,35 @@ console.log("loading back");
 
 
 function goBack() {
+
+    isBack = true;
     var navItem = navigationStack.pop();
     if (navItem!=null) {
         console.log('back listener');
         Back(navItem.url,navItem.relative);
+
         //load content with ajax
     }
 };
 
 
+$(window).on('hashchange', function() {
 
+    if(isBack){
+
+        var backURL = getUrlParameter('page');
+
+        if(backURL!=null){
+
+            Back(backURL,true);
+
+        }
+
+
+
+    }
+
+});
 
 window.addEventListener('popstate', function (e) {
     if(navigationStack.length>=1){
