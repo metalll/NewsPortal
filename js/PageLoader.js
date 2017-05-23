@@ -59,7 +59,6 @@ function PageLoader(url,relative) {
 
 
 
-
     $.ajax({
         url: finalUrl,
         type:'GET',
