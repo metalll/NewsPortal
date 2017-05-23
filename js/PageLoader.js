@@ -47,9 +47,14 @@ function PageLoader(url,relative) {
 
     }else{
 
-        finalUrl += url
+
+
+        finalUrl += url;
+
 
     }
+
+
 
 
 
@@ -60,6 +65,19 @@ function PageLoader(url,relative) {
         type:'GET',
         cache: true,
         success: function(html){
+
+
+            var tempLoc = window.location.protocol + '//';
+            tempLoc += window.location.host;
+            tempLoc += '?page=';
+            tempLoc += url;
+
+            setLocation(tempLoc);
+
+
+
+
+
 
 
             if(document.getElementById('autocomplete-input').value != ""|| document.getElementById('autocomplete-input').value != null){
@@ -180,6 +198,7 @@ function PageLoader(url,relative) {
 function goBack() {
     var navItem = navigationStack.pop();
     if (navItem!=null) {
+        console.log('back listener');
         PageLoader(navItem.url,navItem.relative);
         //load content with ajax
     }

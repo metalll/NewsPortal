@@ -333,11 +333,64 @@
 
 
 <script>
+
+    function setLocation(curLoc){
+        try {
+            history.pushState(null, null, curLoc);
+            return;
+        } catch(e) {}
+        location.hash = '#' + curLoc;
+    }
+
     var caruselBoolFlag = true;
 
 
 
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
 
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
+
+
+
+
+    var pageParam = getUrlParameter('page');
+
+
+    if(pageParam==null||pageParam===undefined||pageParam===false){
+
+
+        console.log(pageParam);
+        pageParam = 'index';
+
+        var tempPosition = window.location.href;
+        if(tempPosition.indexOf('?')!==-1) {
+            tempPosition += '&page=index.html';
+        }
+        else{
+            tempPosition += '?page=index.html';
+        }
+        setLocation(tempPosition);
+
+
+
+    }
+
+
+
+    if(pageParam.indexOf('index')===-1){
+        PageLoader(pageParam,true);
+    }
 
 
     $('.modal').modal({
