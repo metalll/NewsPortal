@@ -69,7 +69,7 @@ function PageLoader(url,relative) {
 
             var tempLoc = window.location.protocol + '//';
             tempLoc += window.location.host;
-            tempLoc += '?page=';
+            tempLoc += '/NewsPortal/index.html?page=';
             tempLoc += url;
 
             setLocation(tempLoc);
