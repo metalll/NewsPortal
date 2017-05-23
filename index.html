@@ -544,7 +544,8 @@ $('#close_search').click(function () {
     $(window.location.href).on('change', function(){
 
        var loaded = getUrlParameter('page');
-
+       console.log("loaded");
+       console.log(loaded);
        if(loaded!=null&&loaded!=undefined){
            Back(loaded);
        }
