@@ -381,8 +381,7 @@ function goBack() {
 
 
 window.addEventListener('popstate', function (e) {
-    var state = e.state;
-    if(state!=null){
+    if(navigationStack.length>=1){
         goBack();
     }
 });
