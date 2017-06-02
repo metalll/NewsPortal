@@ -361,11 +361,17 @@
         var hrefLoading = "";
         hrefLoading += window.location.protocol+"";
         hrefLoading += "//pbezpeka.herokuapp.com/API/Mail";
-
+        var icon_prefix = document.getElementById('icon_prefix').value;
+        var icon_telephone = document.getElementById('icon_telephone').value;
+        var call_theme_select = document.getElementById('call_theme_select').value;
         $.ajax({
             type: "POST",
             url: hrefLoading,
-            data: $('#call_form').serialize(), // serializes the form's elements.
+            data:{
+                icon_prefix : icon_prefix,
+                icon_telephone : icon_telephone,
+                call_theme_select:  call_theme_select
+            }, // serializes the form's elements.
             success: function(data)
             {
                 //alert(data); // show response from the php script.
