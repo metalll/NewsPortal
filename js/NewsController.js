@@ -63,12 +63,12 @@ function downloadNews() {
 
             console.log("news JSON :" + newsLoadedData);
             console.log(newsLoadedData);
-          parseNews();
+
         }
 
     });
 
-    }
+    } parseNews();
 }
 
 function parseNews() {
