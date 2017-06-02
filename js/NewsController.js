@@ -29,6 +29,7 @@ function downloadNews() {
 
     $.ajax({
         url: 'https://ejournal.tool.vmcl.ru/service/popularArticles/?pressId=372&bitrixId=0',
+        cache:false,
         type: "GET",
 
         success: function (data) {
