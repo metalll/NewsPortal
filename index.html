@@ -357,12 +357,15 @@
 
 
     function sendCall() {
-        var form = $("#call_form");
+
+        var hrefLoading = "";
+        hrefLoading += window.location.protocol+"";
+        hrefLoading += "//pbezpeka.herokuapp.com/API/Mail";
 
         $.ajax({
             type: "POST",
-            url: "API/Mail",
-            data: $("#call_form").serialize(), // serializes the form's elements.
+            url: hrefLoading,
+            data: $('#call_form').serialize(), // serializes the form's elements.
             success: function(data)
             {
                 //alert(data); // show response from the php script.
