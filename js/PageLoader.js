@@ -43,13 +43,13 @@ function PageLoader(url,relative) {
 
     var finalUrl = '';
 
-
+    if(relative==true){
 
 
     finalUrl += window.location.protocol+ '//' ;
 
 
-    if(relative==true){
+
 
 
         finalUrl   += window.location.host + "/NewsPortal/" + url;

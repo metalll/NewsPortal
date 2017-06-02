@@ -27,11 +27,11 @@ function downloadNews() {
 
     var pressId = 372;
     var isNext=true;
-    while(isNext){
+
 
 
     $.ajax({
-        url: 'https://ejournal.tool.vmcl.ru/service/popularArticles/?pressId='+pressId+'&bitrixId=0',
+        url: 'https://ejournal.tool.vmcl.ru/service/popularArticles/?pressId=1&bitrixId=900',
         cache:false,
         type: "GET",
 
@@ -61,12 +61,12 @@ function downloadNews() {
 
             console.log("news JSON :" + newsLoadedData);
             console.log(newsLoadedData);
-
+            parseNews();
         }
 
     });
 
-    } parseNews();
+
 }
 
 function parseNews() {
