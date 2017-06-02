@@ -20,18 +20,25 @@ function loadNews() {
     
     
 }
+var pressId = 1;
+var isNext=true;
+
+var articles = [];
+
 
 function downloadNews() {
 
     //https://ejournal.tool.vmcl.ru/service/popularArticles/?pressId=372&bitrixId=0
 
-    var pressId = 372;
-    var isNext=true;
+    if(isNext === false&&pressId > 5){ parseNews();  return;}
+
+
+
 
 
 
     $.ajax({
-        url: 'https://ejournal.tool.vmcl.ru/service/popularArticles/?pressId=1&bitrixId=900',
+        url: 'https://ejournal.tool.vmcl.ru/service/popularArticles/?pressId='+1+'&bitrixId=900',
         cache:false,
         type: "GET",
 
@@ -45,23 +52,21 @@ function downloadNews() {
                 tnewsLoadedData = JSON.parse(JSON.stringify(data));
             }
 
-            if(tnewsLoadedData.articles.length>0||tnewsLoadedData.articles!=null||tnewsLoadedData.articles!=undefined){
+            if(tnewsLoadedData.articles.length>0&&tnewsLoadedData.articles!=null&&tnewsLoadedData.articles!=undefined) {
                 pressId++;
-            }else{
-                isNext = false;
-                return;
             }
 
             if(newsLoadedData===null){
                 newsLoadedData = tnewsLoadedData;
+                articles = tnewsLoadedData.articles;
             }else{
-                newsLoadedData.push(tnewsLoadedData);
+                articles.join(tnewsLoadedData.articles);
             }
 
 
-            console.log("news JSON :" + newsLoadedData);
-            console.log(newsLoadedData);
             parseNews();
+
+
         }
 
     });
@@ -73,7 +78,7 @@ function parseNews() {
 
     var tempVal = [];
 
-    var tempVal = newsLoadedData.articles;
+    var tempVal = articles;
     console.log("temp val");
     console.log(tempVal);
 
