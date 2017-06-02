@@ -255,7 +255,7 @@ function parseQueryServices(dataQueryService) {
 
 
 
-        serviceHtml += "   <div class=\"row col s12 m12 l4\"  href=\"javascript:void(0);\" onclick=\""+dataQueryService[i].content+"\" >";
+        serviceHtml += "   <div class=\"row col s12 hand_cursor m12 l4\"  href=\"javascript:void(0);\" onclick=\""+dataQueryService[i].content+"\" >";
         serviceHtml += "    <div class=\"col s12 m12 l12\">";
         serviceHtml += "";
         serviceHtml += "                <div class=\"hoverable medium card\">";
