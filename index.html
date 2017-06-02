@@ -118,7 +118,7 @@
         <h4 class="center center-align">Обратный звонок</h4>
 
         <div class="row">
-            <form class="col s12">
+            <form id = "call_form" class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">account_circle</i>
@@ -151,7 +151,7 @@
 
 
         <div class="row col s12 center center-align">
-            <a href="#!" class=" col s6 modal-action modal-close waves-effect green darker-3 white-text waves-green btn-flat">Заказать обратный звонок</a>
+            <a href="javascript:void(0)" onclick="sendCall();" class=" col s6 modal-action modal-close waves-effect green darker-3 white-text waves-green btn-flat">Заказать обратный звонок</a>
             <a href="#!" class=" col s5 push-s1 modal-action modal-close waves-effect red darker-3 white-text waves-green btn-flat">Закрыть окно</a>
         </div>
 
@@ -356,7 +356,22 @@
     };
 
 
+    function sendCall() {
+        var form = $("#call_form");
 
+        $.ajax({
+            type: "POST",
+            url: "API/Mail",
+            data: $("#call_form").serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //alert(data); // show response from the php script.
+            }
+        });
+
+
+
+    }
 
 
 
@@ -380,6 +395,9 @@
                  } // Callback for Modal close
         }
     );
+
+
+
 
     $( document ).ready(function() {
 //console log

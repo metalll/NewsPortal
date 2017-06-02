@@ -100,6 +100,7 @@ function serviceParsing() {
         // serviceHtml += "            <\/div>";
 
 
+
         serviceHtml += "   <div class=\"row col s12 m12 l4\"  href=\"javascript:void(0);\" onclick=\""+loadedServiceElements[i].content+"\" >";
         serviceHtml += "    <div class=\"col s12 m12 l12\">";
         serviceHtml += "";
