@@ -27,19 +27,40 @@ function downloadNews() {
 
     //https://ejournal.tool.vmcl.ru/service/popularArticles/?pressId=372&bitrixId=0
 
+    var pressId = 372;
+    var isNext=true;
+    while(isNext){
+
+        newsLoadedData = {};
     $.ajax({
         url: 'https://ejournal.tool.vmcl.ru/service/popularArticles/?pressId=372&bitrixId=0',
         cache:false,
         type: "GET",
 
         success: function (data) {
+            var tnewsLoadedData = {};
             console.log(data);
-            newsLoadedData = {};
+
             try {
-                newsLoadedData = JSON.parse(data);
+                tnewsLoadedData = JSON.parse(data);
             }catch (e){
-                newsLoadedData = JSON.parse(JSON.stringify(data));
+                tnewsLoadedData = JSON.parse(JSON.stringify(data));
             }
+
+            if(tnewsLoadedData.articles.length>0||tnewsLoadedData.articles!=null||tnewsLoadedData.articles!=undefined){
+                pressId++;
+            }else{
+                isNext = false;
+                break;
+            }
+
+            if(newsLoadedData===null){
+                newsLoadedData = tnewsLoadedData;
+            }else{
+                newsLoadedData.push(tnewsLoadedData);
+            }
+
+
             console.log("news JSON :" + newsLoadedData);
             console.log(newsLoadedData);
           parseNews();
@@ -47,7 +68,7 @@ function downloadNews() {
 
     });
 
-    
+    }
 }
 
 function parseNews() {
