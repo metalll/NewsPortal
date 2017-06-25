@@ -162,9 +162,16 @@
 </div>
 
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large green" href="#call_dialog">
+    <a id="call_btn" class="btn-floating btn-large green" href="#call_dialog">
         <i class="material-icons">call</i>
     </a>
+</div>
+
+<div class="tap-target" data-activates="call_btn">
+    <div class="tap-target-content">
+        <h5>Title</h5>
+        <p>A bunch of text</p>
+    </div>
 </div>
 
 <div id="page_content">
@@ -572,6 +579,8 @@ $('#close_search').click(function () {
         }
 
     }
+
+
 
 
 

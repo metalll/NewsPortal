@@ -138,6 +138,11 @@ function PageLoader(url,relative) {
                 loadServices();
             }
 
+            if(finalUrl.indexOf("career")!== -1){
+
+                $('.tap-target').tapTarget('open');
+            }
+
             if(finalUrl.toLowerCase().indexOf("news".toLowerCase())!== -1||finalUrl.indexOf("index")!== -1){
 
                 console.log('loading news....');
