@@ -24,14 +24,24 @@ function auth(login, password) {
                 switch (data) {
                     case kErr:
                     case kBadAuth:
-                        //todo do err
+                        Materialize.toast('Неверный логин/пароль', 4000);
                         break;
 
                     case kSuccess:
-                        //todo do success;
+                        switchPageData();
                         break;
                 }
             }
         }
     );
+
+    function switchPageData() {
+
+        var content = document.getElementById('content');
+        var login = document.getElementById('login');
+
+        removeClass(content,'hide');
+        login.className += 'hide';
+
+    }
 }
