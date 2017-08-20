@@ -11,6 +11,7 @@ const kSuccess = "1";
 function auth(login, password) {
 
     $.ajax({
+            url : "/API/Auth",
             type: "post",
             data: {
 
