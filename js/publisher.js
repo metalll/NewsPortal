@@ -1,0 +1,38 @@
+/**
+ * Created by nsd on 20.08.17.
+ */
+
+const kAuthLogin = "login";
+const kAuthPassword = "password";
+const kErr = "err";
+const kBadAuth = "0";
+const kSuccess = "1";
+
+function auth(login,password){
+
+    $.ajax({
+           type:"get",
+            data:{
+
+               kAuthLogin:login,
+               kAuthPassword:password
+
+            },
+            success:function (data) {
+
+               switch (data){
+                   case kErr:
+                   case kBadAuth:
+                       //todo do err
+                   break;
+
+                   case kSuccess:
+                       //todo do success;
+                   break;
+               }
+            }
+        }
+    );
+}
+
+
