@@ -15,8 +15,8 @@ function auth(login, password) {
             type: "post",
             data: {
 
-                kAuthLogin: login,
-                kAuthPassword: password
+                login: login,
+                password: password
 
             },
             success: function (data) {
