@@ -3,8 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Редактор</title>
+
+
+    <script>
+        if(window.location.protocol=='http:'){
+            document.write(" <link href=\"http:\/\/fonts.googleapis.com\/icon?family=Material+Icons\" rel=\"stylesheet\">");
+
+        }else{
+            document.write(" <link href=\"https:\/\/fonts.googleapis.com\/icon?family=Material+Icons\" rel=\"stylesheet\">");
+        }
+
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<script src="js/srtringHashExt.js"></script>
+<script src="js/publisher.js"></script>
+
+<div class="container" style="margin-top: 10%" id="login">
+
+
+
+    <div class="row">
+        <div class="col s3"></div>
+        <div class="input-field col s6">
+            <input id="login_text" type="text" class="validate">
+            <label for="login_text">Логин</label>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col s3"></div>
+            <div class="input-field col s6">
+                <input id="password" type="password" class="validate">
+                <label for="password">Пароль</label>
+            </div>
+        </div>
+
+    <div class="row">
+
+        <div class="col s3"></div>
+        <div class="col s6"><a class="btn col s12" onclick="sign();">Войти</a></div>
+
+    </div>
+
+</div>
+
+
+
+<div class="container" id="content">
+
+
+
+</div>
+
 </body>
+
+<script>
+
+    function sign() {
+
+        var login = document.getElementById("login_text").value;
+        var password = document.getElementById("password").value.hashCode();
+
+        auth(login,password);
+
+        console.log(login);
+        console.log(password);
+    }
+
+</script>
+
 </html>

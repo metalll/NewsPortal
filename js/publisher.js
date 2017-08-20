@@ -8,31 +8,29 @@ const kErr = "err";
 const kBadAuth = "0";
 const kSuccess = "1";
 
-function auth(login,password){
+function auth(login, password) {
 
     $.ajax({
-           type:"get",
-            data:{
+            type: "post",
+            data: {
 
-               kAuthLogin:login,
-               kAuthPassword:password
+                kAuthLogin: login,
+                kAuthPassword: password
 
             },
-            success:function (data) {
+            success: function (data) {
 
-               switch (data){
-                   case kErr:
-                   case kBadAuth:
-                       //todo do err
-                   break;
+                switch (data) {
+                    case kErr:
+                    case kBadAuth:
+                        //todo do err
+                        break;
 
-                   case kSuccess:
-                       //todo do success;
-                   break;
-               }
+                    case kSuccess:
+                        //todo do success;
+                        break;
+                }
             }
         }
     );
 }
-
-
