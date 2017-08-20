@@ -37,11 +37,10 @@ function auth(login, password) {
 
     function switchPageData() {
 
-        var content = document.getElementById('content');
-        var login = document.getElementById('login');
 
-        removeClass(content,'hide');
-        login.className += 'hide';
+        $("#content").removeClass("hide");
+        $("#login").addClass("hide");
+
 
     }
 }
