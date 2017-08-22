@@ -131,12 +131,14 @@
                         type:"get",
                         success:function (data) {
 
+                            var preparedData = JSON.parse(data);
+
                             console.log("loaded news");
 
-                            var News = data.values;
+                            var News = preparedData.values;
 
 
-                            renderNews(News,data.elementsCount);
+                            renderNews(News,preparedData.elementsCount);
 
 
                         }
@@ -163,7 +165,6 @@
 
         }
     }
-
 
 
 
