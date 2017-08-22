@@ -154,16 +154,51 @@
 
     });
 
+
+
     function renderNews(News,length) {
 
         console.log(News);
         console.log(length);
 
+        var newsView="";
+
+        newsView += " <h3 class=\"center white-text\">Новости<\/h3>";
+        newsView += "        <ul class=\"collection\">";
+
+
         for(var i=0;i<length;i++){
             var currentNews = News[i];
             console.log(currentNews);
 
+
+            var dataOfAdded = currentNews.dataOfAdded;
+            var headerDescription = currentNews.headerDescription;
+            var id = currentNews.id;
+            var image = currentNews.image;
+            var minimalDescription = currentNews.minimalDescription;
+            var content  = currentNews.content;
+
+
+            newsView += "            <li class=\"collection-item avatar\">";
+            newsView += "                <img src=\"img\/dark_logo.png\" alt=\"\" class=\"circle\">";
+            newsView += "                <span class=\"title indigo-text text-darken-4 \"><\/span>";
+            newsView += "                <p style=\"width: 77%; font-size: 15px\">"+headerDescription+"<br>";
+            newsView += "                <span class=\"right right-align\" style=\"font-size: 11px\">"+dataOfAdded+"<\/span>";
+            newsView += "                    <br>";
+            newsView += "                <\/p>";
+            newsView += "                <a href=\""+id+"\" class=\"secondary-content \"><i class=\"material-icons small black-text\">more_vert<\/i><\/a>";
+            newsView += "            <\/li>";
+            newsView += "";
+            newsView += "";
+
         }
+
+        newsView += "        <\/ul>";
+
+        var newsContainer = document.getElementById("content");
+        newsContainer.innerHTML = newsView;
+
     }
 
 
