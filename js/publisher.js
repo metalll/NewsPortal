@@ -36,10 +36,6 @@ function auth(login, password) {
     );
 
     function switchPageData() {
-
-
-        $("#content").removeClass("hide");
-        $("#login").addClass("hide");
-
+        location.reload(true);
     }
 }
