@@ -134,9 +134,9 @@
                             console.log("loaded news");
 
                             var News = data.values;
-                            News.length = data.elementsCount;
 
-                            renderNews(News);
+
+                            renderNews(News,data.elementsCount);
 
 
                         }
@@ -152,9 +152,9 @@
 
     });
 
-    function renderNews(News) {
+    function renderNews(News,length) {
 
-        for(var i=0;i<News.length;i++){
+        for(var i=0;i<length;i++){
             var currentNews = News[i];
             console.log(currentNews);
 
