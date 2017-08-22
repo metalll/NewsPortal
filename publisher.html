@@ -99,60 +99,69 @@
         console.log(login);
         console.log(password);
     }
-    
+
     $(document).ready(function () {
 
-       $.ajax({
+        $.ajax({
 
-           url:"/API/Auth",
-           type:"get",
-           success:function (data) {
-
-
-               if(!$("#preloader").hasClass("hide")){
-                   $("#preloader").addClass("hide");
-               }
-               if(data == 0){
+            url:"/API/Auth",
+            type:"get",
+            success:function (data) {
 
 
-                   if($("#login").hasClass("hide")){
-                       $("#login").removeClass("hide");
-                   }
-               }else {
-
-                   if($("#content").hasClass("hide")){
-                       $("#content").removeClass("hide");
-                   }
+                if(!$("#preloader").hasClass("hide")){
+                    $("#preloader").addClass("hide");
+                }
+                if(data == 0){
 
 
-                   $.ajax({
+                    if($("#login").hasClass("hide")){
+                        $("#login").removeClass("hide");
+                    }
+                }else {
 
-                       url:"/API/News",
-                       type:"get",
-                       success:function (data) {
-
-                           console.log("loaded news");
-
-                           var News = data.values;
-
-                            console.log(news);
+                    if($("#content").hasClass("hide")){
+                        $("#content").removeClass("hide");
+                    }
 
 
-                       }
+                    $.ajax({
+
+                        url:"/API/News",
+                        type:"get",
+                        success:function (data) {
+
+                            console.log("loaded news");
+
+                            var News = data.values;
+                            if(News!=[]&&News!=null){
+
+                                renderNews(News);
+                            }
+
+                        }
 
 
-                   });
+                    });
 
-               }
+                }
 
-           }
+            }
 
-
-
-       });
+        });
 
     });
-    
+
+    function renderNews(News) {
+
+        for(var i=0;i<News.size;i++){
+            var currentNews = News[i];
+            console.log(currentNews);
+
+        }
+    }
+
+
 
 
 
