@@ -41,6 +41,5 @@ function auth(login, password) {
         $("#content").removeClass("hide");
         $("#login").addClass("hide");
 
-
     }
 }
