@@ -113,8 +113,21 @@
                    $("#login").removeClass()("hide");
                }else {
 
-                   $("#content").removeClass("hide")
+                   $("#content").removeClass("hide");
 
+                   $.ajax({
+
+                       url:"/API/News",
+                       type:"get",
+                       success:function (data) {
+
+                           console.log("loaded news");
+                           console.log(data);
+
+                       }
+
+
+                   });
 
                }
 
