@@ -108,12 +108,22 @@
            type:"get",
            success:function (data) {
 
-               $("#preloader").addClass("hide");
+
+               if(!$("#preloader").hasClass("hide")){
+                   $("#preloader").addClass("hide");
+               }
                if(data == 0){
-                   $("#login").removeClass()("hide");
+
+
+                   if($("#login").hasClass("hide")){
+                       $("#login").removeClass("hide");
+                   }
                }else {
 
-                   $("#content").removeClass("hide");
+                   if($("#content").hasClass("hide")){
+                       $("#content").removeClass("hide");
+                   }
+
 
                    $.ajax({
 
@@ -122,7 +132,11 @@
                        success:function (data) {
 
                            console.log("loaded news");
-                           console.log(data);
+
+                           var News[] = data.values;
+
+                            console.log(news);
+
 
                        }
 
