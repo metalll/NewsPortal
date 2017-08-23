@@ -65,18 +65,8 @@
 <script>
     tinymce.init({
         selector: 'textarea',
-        images_upload_handler: function (blobInfo, success, failure) {
-            var xhr, formData;
-            xhr = new XMLHttpRequest();
-            xhr.withCredentials = false;
-            xhr.open('POST', '/API/File');
-            xhr.onload = function() {
-              success(xhr.responseText);
-            };
-            formData = new FormData();
-            formData.append('file', blobInfo.blob(), fileName(blobInfo));
-            xhr.send(formData);
-        },
+
+        images_upload_url: '/API/File',
         automatic_uploads: true,
         height: 500,
         theme: 'modern',
