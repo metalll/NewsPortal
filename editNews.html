@@ -93,6 +93,60 @@
     }
 
 
+    $(document).ready(function () {
+
+
+        $.ajax({
+
+            url:"/API/Auth",
+            type:"get",
+            success:function (data) {
+
+                if(data == 0){
+
+                    location.href = "/NewsPortal/publisher.html";
+
+                }else{
+
+                    var id = findGetParameter('id');
+
+                    var isNew = findGetParameter('isNew');
+
+                    if(id!=null){
+                        //console.log(id);
+
+                        renderSavedNews(id);
+
+                    } else if(isNew!=null&&isNew=="YES"){
+
+                    }else{
+
+                        showError();
+
+                    }
+
+
+                }
+
+            }
+        });
+
+
+
+    });
+
+    function showError() {
+
+    }
+
+    function renderSavedNews(id) {
+
+
+
+
+    }
+
+
     tinymce.init({
         selector: 'textarea',
         images_upload_url: '/API/File',
