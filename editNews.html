@@ -141,7 +141,19 @@
 
     function renderSavedNews(id) {
 
+        var LoadedNews = null;
 
+
+        $.ajax({
+
+            url:'API/News?id='+id,
+            type:'get',
+            success:function (data) {
+                console.log(data);
+
+
+            }
+        })
 
 
     }
