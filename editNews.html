@@ -149,7 +149,21 @@
             url:'/API/News?id='+id,
             type:'get',
             success:function (data) {
-                console.log(data);
+                LoadedNews = JSON.parse(data);
+                if(LoadedNews!=null){
+
+                    document.getElementById('header_content').value = LoadedNews.headerDescription;
+                    tinymce.editors[0].execCommand('mceInsertContent', false, b64DecodeUnicode(LoadedNews.content));
+                    document.getElementById('avatar-img').setAttribute('src',LoadedNews.image);
+                    document.getElementById('publish_date').value = LoadedNews.dataOfAdded;
+
+                    Materialize.updateTextFields();
+
+                }else{
+
+
+
+                }
 
 
             }
